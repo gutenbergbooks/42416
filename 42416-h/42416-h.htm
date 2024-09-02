@@ -1,0 +1,1285 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+    'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .no-italics { font-style: normal }
+
+  .bold       { font-weight: bold }
+  .no-bold    { font-weight: normal }
+
+  .small-caps { } /* Epub needs italics */
+  .gesperrt   { } /* Epub needs italics */
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .justify    { text-align: justify }
+  .center     { text-align: center; text-indent: 0 }
+  .centerleft { text-align: center; text-indent: 0 }
+  .right      { text-align: right;  text-indent: 0 }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 0; 
+              text-indent: 2em }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-after:  avoid }
+
+  .container, .title, .subtitle, #pg-header            
+                      { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.pfirst, p.noindent { 
+    text-indent: 0 
+  }
+
+  .boxed         { border: 1px solid black; padding: 1em }
+  .topic, .note  { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section    { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils          { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+  div.transition       { margin: 1.5em 0 }
+
+  .vfill, .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                        { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1    { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2    { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3    { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4    { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5    { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.title, p.subtitle.level-1,
+  h2.title, p.subtitle.level-2    { text-align: center }
+
+  #pg-header,
+  h1.document-title               { margin: 10% 0 5% 0 }
+  p.document-subtitle             { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  .attribution            { margin-top: 1.5em }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em   10% }
+  div.image    { margin: 1.5em  0  }
+  div.caption  { margin: 1.5em  0 }
+  div.legend   { margin: 1.5em  0 }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin-top: 3em; margin-bottom: 3em }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title, p.admonition-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+
+  table.table.hrules-table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table.hrules-table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table.hrules-rows  tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table.hrules-rows  tr.last        { border-width: 0 }
+  table.table.hrules-rows  td, 
+  table.table.hrules-rows  th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table tr             { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 0.5ex 1em }
+  table.table tr.first td    { padding-top: 1ex }
+  table.table tr.last td     { padding-bottom: 1ex }
+  table.table tr.first th    { padding-top: 1ex }
+  table.table tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  div.footnote-group          { margin: 1em 0 }
+  table.footnote td.label     { width: 2em; text-align: right; padding-left: 0 }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  /* em                { font-style: normal }
+  strong            { font-weight: normal } */
+
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important; 
+                    text-indent: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  span.dropcap      { float: left; margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { float: left; margin: 0 0.5em 0 0; max-width: 25% }
+  span.dropspan     { font-variant: small-caps }
+
+  .no-page-break    { page-break-before: avoid !important }
+
+  /* PAGINATION */
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, .dedication, .plainpage
+                       { margin: 10% 0; }
+
+   div.clearpage, div.cleardoublepage
+                       { margin: 10% 0; border: none; border-top: 1px solid gray; }
+
+   .vfill              { margin:  5% 10% }
+  }
+
+  @media print {
+   div.clearpage       { page-break-before: always; padding-top: 10% }
+   div.cleardoublepage { page-break-before: right;  padding-top: 10%  }
+
+   .vfill              { margin-top: 20% }
+   h2.title            { margin-top: 20% }
+  }
+
+  /*]]>*/
+  </style>
+  <title>PICCOLE ANIME</title>
+  <style type="text/css">
+  /*<![CDATA[*/
+  .pageno       { position: absolute; right: 95%; font: medium sans-serif; text-indent: 0 }
+  .pageno:after { color: gray; content: '[' attr(title) ']' }
+  .lineno       { position: absolute; left:  95%; font: medium sans-serif; text-indent: 0 }
+  .lineno:after { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref  { float: right }
+  pre           { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+  /*]]>*/
+  </style>
+</head>
+<body>
+  <div class="document" id="piccole-anime">
+    <h1 class="center document-title level-1 pfirst title"><span class="x-large">PICCOLE ANIME</span></h1><!-- this is the default PG-RST stylesheet -->
+    <!-- figure and image styles for non-image formats -->
+    <!-- default transition -->
+    <!-- default attribution -->
+    <!-- -*- encoding: utf-8 -*- -->
+    <!--  -->
+    <!-- -*- encoding: utf-8 -*- -->
+    <div class="align-None class container titlepage">
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="large">MATILDE SERAO</span>
+        </div>
+      </div>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="xx-large">PICCOLE ANIME</span>
+        </div>
+      </div>
+      <div class="align-center auto-scaled block figure" style="width: 20%"><img class="align-center block center xx-large" style="display: block; width: 100%" alt=" " src="images/cop.png" /></div>
+    </div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="center line">
+            <span>MILANO</span>
+          </div>
+          <div class="center line">
+            &nbsp;
+          </div>
+          <div class="center line">
+            <span>LIBRERIA EDITRICE GALLI</span>
+          </div>
+          <div class="center line">
+            <span>DI</span>
+          </div>
+          <div class="center line">
+            <span>C. CHIESA e F. GUINDANI</span>
+          </div>
+          <div class="center line">
+            &nbsp;
+          </div>
+          <div class="center line">
+            <span>Lipsia e Vienna, F. A. Brockhaus&nbsp;—&nbsp;Berlino, A. Asher e C.</span>
+          </div>
+          <div class="center line">
+            <span>Parigi, Veuve Boyveau&nbsp;—&nbsp;Napoli, Ernesto Anfossi.</span>
+          </div>
+          <div class="center line">
+            <span>Londra, David Nutt, Strand 270.</span>
+          </div>
+          <div class="center line">
+            &nbsp;
+          </div>
+          <div class="center line">
+            <span>1890</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <p class="center pfirst"><span class="invisible pageno target" id="page-006" title="006"></span><span>Proprietà letteraria.</span></p>
+    <p class="center pnext"><span>MILANO&nbsp;—&nbsp;TIP. LOMBARDI VIA FIORI OSCURI 7</span></p>
+    <div class="level-2 section" id="id1">
+      <h2 class="center level-2 pfirst section-title title"><span class="invisible pageno target" id="page-007" title="007"></span><span>INDICE</span></h2>
+      <div class="container contents">
+        <ul class="compact simple toc-list">
+          <li class="level-2 toc-entry">
+            <p class="first pfirst"><a class="reference internal" href="#a-un-poeta" id="id6" name="id6">A UN POETA</a> <span class="toc-pageref">009</span></p>
+          </li>
+          <li class="level-2 toc-entry">
+            <p class="first pfirst"><a class="reference internal" href="#una-fioraia" id="id7" name="id7">UNA FIORAIA</a> <span class="toc-pageref">017</span></p>
+          </li>
+          <li class="level-2 toc-entry">
+            <p class="first pfirst"><a class="reference internal" href="#giuochi" id="id8" name="id8">GIUOCHI</a> <span class="toc-pageref">033</span></p>
+          </li>
+          <li class="level-2 toc-entry">
+            <p class="first pfirst"><a class="reference internal" href="#canituccia" id="id9" name="id9">CANITUCCIA</a> <span class="toc-pageref">051</span></p>
+          </li>
+          <li class="level-2 toc-entry">
+            <p class="first pfirst"><a class="reference internal" href="#profili" id="id10" name="id10">PROFILI</a> <span class="toc-pageref">073</span></p>
+          </li>
+          <li class="level-2 toc-entry">
+            <p class="first pfirst"><a class="reference internal" href="#alla-scuola" id="id11" name="id11">ALLA SCUOLA</a> <span class="toc-pageref">083</span></p>
+          </li>
+          <li class="level-2 toc-entry">
+            <p class="first pfirst"><a class="reference internal" href="#nebulose" id="id12" name="id12">NEBULOSE</a> <span class="toc-pageref">101</span></p>
+          </li>
+          <li class="level-2 toc-entry">
+            <p class="first pfirst"><a class="reference internal" href="#moda" id="id13" name="id13">MODA</a> <span class="toc-pageref">111</span></p>
+          </li>
+          <li class="level-2 toc-entry">
+            <p class="first pfirst"><a class="reference internal" href="#perdizione" id="id14" name="id14">PERDIZIONE</a> <span class="toc-pageref">123</span></p>
+          </li>
+          <li class="level-2 toc-entry">
+            <p class="first pfirst"><a class="reference internal" href="#gli-spostati" id="id15" name="id15">GLI SPOSTATI</a> <span class="toc-pageref">137</span></p>
+          </li>
+          <li class="level-2 toc-entry">
+            <p class="first pfirst"><a class="reference internal" href="#salvazione" id="id16" name="id16">SALVAZIONE</a> <span class="toc-pageref">151</span></p>
+          </li>
+        </ul>
+      </div>
+    </div><!--  -->
+    <blockquote>
+      <div>
+        <div class="align-center auto-scaled block figure" style="width: 14%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/fineparag.png" /></div>
+      </div>
+    </blockquote>
+    <p class="pfirst"><span class="invisible pageno target" id="page-008" title="008"></span> <span class="invisible pageno target" id="page-009" title="009"></span></p>
+    <div class="level-2 section" id="a-un-poeta">
+      <h2 class="center level-2 pfirst section-title title"><a class="toc-backref" href="#id6"><span>A UN POETA</span></a></h2>
+      <div class="vspace" style="height: 2em"></div>
+      <blockquote>
+        <div>
+          <div class="align-center auto-scaled block figure" style="width: 74%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/cor.png" /></div>
+        </div>
+      </blockquote>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="pfirst"><span class="invisible pageno target" id="page-010" title="010"></span> <span class="invisible pageno target" id="page-011" title="011"></span></p>
+      <p class="center pfirst"><span>&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.</span></p>
+      <blockquote>
+        <div>
+          <p class="pfirst"><span>a un poeta.</span></p>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">Una volta, io scrissi di un bambino biondo e reale. Mi faceva pensare la stranezza della vita precoce, in cui le care ingenue puerilità erano sacrificate ai doveri inflessibili di un’alta educazione, in cui i soavi sensi infantili erano in urto con la rigidezza del cerimoniale: piccola anima gaia e noncurante che doveva informarsi, troppo presto, a grandi e severi sentimenti.</em></p>
+      <p class="pnext"><em class="italics">Tale l’intenzione d’arte, vivificata da un sentimento tutto femminile di simpatia. Da coloro cui l’astrazione dell’ideale politico intorbida la serenità del giudizio, fu intesa male o non fu voluta intendere: fu detta adulazione, cortigianeria, servilismo, e furono usate altre parole consimili, a cui la volgarità del corso ha tolto ogni valore. Invano io volli chiarire la mia intenzione, invano io volli stabilire una divisione fra la politica e l’arte, fra le teorie umanitarie e l’arte. Come in tutte le polemiche d’idee, senza fatti, ognuno rimase del proprio parere</em><span>.</span></p>
+      <p class="pnext"><em class="italics">Allora scrissi: sempre un bimbo mi sorprende e mi fa pensare. Questa impressione è viva ancora oggi, agita anche adesso la mia coscienza. I bimbi sono naturalmente buoni e misteriosamente cattivi: singolari, interessanti, attraenti piccoli tipi, in cui l’umanità assume le sue forme più leggiadre e più bizzarre. Pei loro sorrisi che sono tutta una luce e per i morsi che dànno a una sorellina più grande; per la strana scienza che appare nelle loro profonde risposte e per l’istinto di distruzione che li domina; per la carezza dei loro occhi sereni e per la convulsione paurosa delle loro collere infantili; per l’elemosina che fanno e per l’uccellino che spennacchiano; per il bacio che ci dànno, spontaneo, affettuoso, e per lo sgarbo con cui ci ringraziano del dono di un giocattolo; per le loro simpatie istintive e per i loro odii irragionevoli: per tutta questa contraddizione i bimbi valgono&nbsp;—&nbsp;per l’arte&nbsp;—&nbsp;quanto l’uomo nel pieno rigoglio della sua virilità, quanto la donna nel pieno fiore della sua bellezza.</em></p>
+      <p class="pnext"><em class="italics">E poi questo bimbo moderno, nato da gente inquieta e convulsa, cresciuto spesso in un ambiente di nervosità irritante o di languida malinconia, che vede troppe cose, che assiste troppo alle piccole catastrofi familiari, che impara troppe cose, questo bimbo ha ora acquistato una sensibilità precoce, una intuizione troppo rapida. Talvolta&nbsp;—&nbsp;e sempre senz’averne coscienza&nbsp;—&nbsp;un bimbo è così sottilmente scettico che ci sgomenta, noi che avemmo un’infanzia molto più grossolana, molto più animalesca, ma molto più allegra. Il bimbo moderno legge troppi libri illustrati ed ha per mano troppi giornali. Quando suo padre parla tranquillamente di suicidio, quando suo zio si burla della religione, egli tende l’orecchio. Così il bimbo è più facilmente infelice. Infelice pel sangue povero che le razze deboli mettono nelle vene delle loro creature; per la tisi, per il rachitismo, per la follia che si ereditano; infelice per l’abbandono e la povertà, uniti insieme; infelice per l’abbandono e la ricchezza, uniti insieme; infelice per l’ambiente di disonestà plebea in cui deve vivere; infelice per l’ambiente di disonestà aristocratica in cui deve crescere; infelice pel padre artista ed egoista; per la madre gran dama e disamorata: per molte colpe nostre, infelice. Il bimbo impara a soffrire, ad amare, a fingere come noi. Ed è talmente unito alla nostra vita, parte di noi più sorridente e più sensitiva, che spesso egli ci salva&nbsp;—&nbsp;e spesso egli ci perde.</em></p>
+      <p class="pnext"><em class="italics">Questo piccolo libro, scritto pei grandi, parla sempre di bimbi, nelle sue storielle. Sono bimbi veri: non li ho sognati, mi apparvero nella loro realtà. Vissero meco un anno, un minuto, un giorno, un’ora, faccine smunte o guance colorite, corpicciuoli scarni o pienotti, vestitini di raso o straccetti per cui si vedeva la pelle&nbsp;—&nbsp;ed erano creature volta a volta ingenue e pensierose, fantastiche e brutali, dolci e acri.</em></p>
+      <p class="pnext"><em class="italics">Voi, o poeta, che foste il più mite fra i miei avversari, avete un figlioletto gentile e pallido, dai grandi occhioni bruni, pieni di visioni malinconiche, un bambino che avete chiamato Tristano, per cui avete scritto versi tristi e audaci, a cui forse avrete letto questi versi, turbandone la piccola anima, dandole la nostalgia della nobile e pericolosa regione della poesia. Ebbene, a questo bambino che non mi conosce, io voglio dedicare questo piccolo libro.</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              <span>Matilde Serao.</span>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><span class="invisible pageno target" id="page-012" title="012"></span> <span class="invisible pageno target" id="page-013" title="013"></span> <span class="invisible pageno target" id="page-014" title="014"></span> <span class="invisible pageno target" id="page-015" title="015"></span> <span class="invisible pageno target" id="page-016" title="016"></span> <span class="invisible pageno target" id="page-017" title="017"></span></p>
+      <div class="align-center auto-scaled block figure" style="width: 73%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/corn.png" /></div>
+    </div>
+    <div class="level-2 section" id="una-fioraia">
+      <h2 class="center level-2 pfirst section-title title"><a class="toc-backref" href="#id7"><span>UNA FIORAIA</span></a></h2>
+      <p class="pfirst"><span class="invisible pageno target" id="page-018" title="018"></span> <span class="invisible pageno target" id="page-019" title="019"></span></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              <span>Date lilia.......</span>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><span>La bimba camminava lentamente, rasentando il muro, per la via stretta e tortuosa dei Mercanti. Ella non guardava nelle botteghe, non alzava gli occhi a quella lunga striscia di cielo che appariva fra le alte case, non guardava neppure dinnanzi a sè. Guardava le pietre, come se le contasse. Camminava, senza curarsi del fango del selciato, degli urtoni che le davano, di qualche rara carrozza che passava. Quando arrivò alla chiesetta del Cerriglio, dirimpetto alla statua dell’</span><em class="italics">Eccehomo</em> <span>vestito di rosso, coronato di spine, con gli occhi pieni di lagrime</span> <span class="invisible pageno target" id="page-020" title="020"></span><span>immobili, la fronte e il petto macchiati di sangue coagulato, la bimba gli dette uno sguardo indifferente e tornò indietro, con la stessa andatura rigida.</span></p>
+      <p class="pnext"><span>Era una mendica. Aveva fame, aveva freddo, aveva sete. Aveva le gambe nude, i piedini scalzi che si deformavano nella mota. In quel gelido giorno di febbraio, ella non portava che una camicia e un sottanino lacero e sfrangiato, mantenuto su, alla cinta, da uno spago. Aggrovigliato al collo, un brandello di ciarpa all’uncinetto. Niente altro. La bimba era molto magra, quasi stecchita: dagli strappi della camicia e del sottanino si vedeva una carnagione esangue, cinerea; sotto la ciarpa si vedevano le due ossa clavicolari sporgenti, come se volessero bucare la pelle; s’indovinava la meschinità malaticcia di quei busto legnoso di bambina. Le spalle erano aguzze, curve, come quelle di chi si raggricchia sempre per freddo o per chetare lo spasimo dello stomaco. Un volto serio e grave, con la medesima tinta</span> <span class="invisible pageno target" id="page-021" title="021"></span><span>plumbea del corpo; rugata la fronte breve; corrugate le sottili sopracciglia, troppo grandi gli occhi dalla palpebra bigia, sottolineati di bistro, incavernati, profondi; duro, rigido il profilo, già formato come quello di una donna; la bocca stretta, chiusa, le labbra pallide, senza fremiti, con due rughe agli angoli. Ella aveva sette anni.</span></p>
+      <p class="pnext"><span>Un giorno aveva avuto una madre scarna, mendica anche lei. Vagavano ambedue per le vie di Porto, cercando l’elemosina. Mangiavano spesso del pane e dormivano in un sottoscala, sulla paglia, la figlia col capo in grembo alla madre. Poi la madre era morta, di tifo: la bambina era rimasta sola, sul lastrico. Non pianse, non gridò, usci per cercare l’elemosina, non ebbe nulla: quel giorno non mangiò e dormì all’aria aperta, sullo scalino della chiesa di Portanova, arrotondata come un cane.</span></p>
+      <p class="pnext"><span>Per tre anni la vita della bambina non aveva avuto varianti. Ella non sapeva nulla, non ricordava nulla, altro che un lunghissimo giorno</span> <span class="invisible pageno target" id="page-022" title="022"></span><span>in cui aveva avuto sempre fame. Dalla mattina cominciava le sue peregrinazioni. La strada dei Mercanti, lungo budello contorto, era la sua casa, ed ella ne conosceva tutte le viuzze, i vicoli ciechi, gli angiporti paurosi, le botteghe nere, i ruscelli fetidi, i portoncini angusti e bruni, illuminati di una luce fioca e grigia, le scalette smussate. Andava e veniva, senza posa, dalla piazzetta di Portanova, donde era il suo punto di partenza, sino alla cappella del Cerriglio, dove era il suo punto di arrivo. Si fermava a piazzetta di Porto, faceva un mezzo giro e riesciva all’antico Sedile, dava uno sguardo al simulacro del dio Orione attaccato alla muraglia che il popolo chiama Pesce Niccolò, poi saliva per Mezzocannone, bagnandosi i piedi nelle acque azzurre, rosse, violette dei tintori che lavoravano in certi antri lugubri, intorno a caldaie nere, agitandovi un miscuglio misterioso. Arrivata su, non osava andare più oltre e ridiscendeva ai Mercanti; non dava neppure un’occhiata alla taverna aperta sotto un</span> <span class="invisible pageno target" id="page-023" title="023"></span><span>porticato dove si friggevano pesci e</span> <em class="italics">pastelle</em><span>, dove si espandevano le vivezze rosse del</span> <em class="italics">soffritto</em> <span>e gli acuti odori delle</span> <em class="italics">pastinache</em> <span>in aceto. Voltava a destra per la scaletta lurida di santa Barbara, s’inerpicava fino al famoso biscottaio, ma i biscotti le facevano troppo gola e scappava via: al ridiscendere, si fermava innanzi alla porta dello stabilimento di bagni, guardando una vasca di macigno artificiale, dove non ci era acqua, ma dove si ergeva una</span> <em class="italics">musa</em> <span>dalle larghe foglie verdi: continuava la sua via sino al Cerriglio e tornava indietro, sempre col suo passo guardingo, sfiorando i muri, scivolando tra le gambe dei viandanti.</span></p>
+      <p class="pnext"><span>Quelle viuzze nere, quella strettezza, quella miseria, quelle case stillanti umidità, quei cattivi odori, quei portoni sospetti, quelle tinte cupe, quell’assenza di sole, quelle facce usuraie dei commercianti, quelle facce losche dei loro mediatori, quelle facce ebeti di male femmine, quella merce gretta, impolverata, avariata, erano tutto il suo mondo. Sentiva vagamente che di</span> <span class="invisible pageno target" id="page-024" title="024"></span><span>sopra santa Barbara, di sopra Mezzocannone, di sopra il Cerriglio, alla fine di via Principessa Margherita, vi era un altro mondo, ma ella temeva di arrischiarvisi, ne aveva una paura selvaggia. Anche giù nei Mercanti, ella aveva paura delle altre mendicanti che la picchiavano, dei cani che volevano morderla, delle guardie che potevano arrestarla: ma ella era furba a schermirsi da questi pericoli.</span> <em class="italics">Lassù</em><span>, il pericolo era ignoto. Quando arrivava a quei limiti, dava uno sguardo sospettoso in su, poi fuggiva, nascondendosi il capo ricciuto nel braccio, come se la perseguitassero.</span></p>
+      <p class="pnext"><span>Chiedeva l’elemosina, ma non gliela davano spesso. Tutta quella gente affaccendata a guadagnare una dura giornata, bottegai accaniti a imbrogliare i compratori contadini, facchini curvi sotto le balle, serve luride e straccione, non badavano a lei. Qualche</span> <em class="italics">galantuomo</em> <span>la prendeva per una piccola ladra e si tastava le tasche, dicendole una parolaccia; qualcuno, anche vestito decentemente, era povero, la guardava</span> <span class="invisible pageno target" id="page-025" title="025"></span><span>e si stringeva nelle spalle. A qualcuno faceva disgusto, e la scacciava con un gesto di noia. Ella chiedeva prima a voce alta, quasi imperiosa, un soldo per mangiare, non avendo mangiato il giorno prima, nella tortura dello stomaco che si ribellava: poi la voce si abbassava, diventava supplichevole, ansante, lamentosa, poche e gelide lagrime le scendevano per le guance. Essa continuava ad andare e venire, come per istinto, balbettando parole indistinte, sino a che la voce le si seccava nella gola riarsa: allora chiedeva l’elemosina con la intensità dello sguardo. Verso la fine della giornata, quando non le avevano dato nulla, era presa da una grande stanchezza, il capogiro la faceva vacillare, ella si trascinava sino ai gradini della chiesa di Portanova e vi rimaneva, immobile, accoccolata, come un batuffolo di stracci, donde sfuggiva un sordo lamento. Si rialzava, per girare ancora, fra i lumi che si accendevano, gli operai che ritornavano dal lavoro e l’odore di mangiare che usciva</span> <span class="invisible pageno target" id="page-026" title="026"></span><span>dalle botteghe socchiuse. Allora arrivava a raccogliere due centesimi o una fetta di pane o un osso di costoletta o uno scampoletto di trippa, e scappava a divorarlo, provando un bruciore insopportabile allo stomaco. Ma venivano spesso i giorni in cui non aveva nulla e si addormiva in un torpore malaticcio, senza aver mangiato altro che le bucce di aranci fradici, o masticato i baccelli dei piselli. Il sabato era il migliore suo giorno: al sabato una femmina giovane, col fazzoletto di seta rosso attorno al collo, la gonna corta e legata sullo stomaco, la pianella col tacco alto e il fiocco verde, la pettinessa d’argento nell’alto cocuzzolo dei capelli impomatati, le guance cariche di carminio, le dava un soldo. La giovane femmina stava per lo più accantonata a un portoncino, le mani nelle taschette del grembiule, lo sguardo vagante, la fisonomia stupida, canticchiando dalla mattina alla sera una canzoncina lenta:</span></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              <span>Spina de pesce,</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+            <div class="line">
+              <span>Sta vita desperata quanno fenesce?</span>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><span class="invisible pageno target" id="page-027" title="027"></span><span>Ogni giorno, molte volte, la bimba le passava daccanto. Ma solo il sabato l’altra le dava un soldo: questo per cinque o sei mesi. Poi la donna scomparve. L’avevano buttata o s’era buttata nel pozzo.</span></p>
+      <p class="pnext"><span>In quella giornata di domenica, la bimba si sentiva morire. Ogni tanto le mancavano le forze e si sedeva per terra. Le botteghe erano chiuse, i viandanti frettolosi non le davano retta, dirigendosi tutti alle strade superiori, scomparendo</span> <em class="italics">lassù</em><span>: ella li seguiva macchinalmente, con lo sguardo. Entrò nella chiesa di Portanova. La chiesa era vuota, le parve immensa e paurosa; ebbe una sensazione di freddo, co’ suoi piedini nudi sul marmo; il sagrestano l’acchiappò e la mise fuori. Ella riprese la sua corsa nelle strade spopolate: si vide sola, disperata. Tutti erano andati</span> <em class="italics">lassù</em><span>.</span></p>
+      <p class="pnext"><span>Allora, dimenticando la sua paura, spinta dalla fame, dall’istinto, superò la frontiera, e oltrepassato il larghetto di Rua Catalana, salì gli scalini di san Giuseppe. Fu stupefatta: vedeva</span> <span class="invisible pageno target" id="page-028" title="028"></span><span>quello che non aveva mai visto, la strada larga, i magazzini puliti, i palazzi bianchi, i giardini, il cielo. Dimenticava la sua fame davanti a così mirabile spettacolo: non vi pensò più dinnanzi a un negozio di giocattoli.</span> <em class="italics">Lassù</em> <span>tutto era bello: ed ella seguì la folla che si avviava per Fontana Medina, fermandosi ogni momento, eccitata, curiosa, scordandosi di chiedere l’elemosina. Solo le carrozze la spaventavano col continuo loro incrociarsi; ma seguiva il marciapiede. A piazza Municipio, vinta di nuovo dalla stanchezza, sedette sopra un banco, presso il giardino; ma dopo un poco saltò giù e corse anche lei verso san Carlo: là si perdette, piccina come era, nella folla che la trascinò verso san Ferdinando. Non vedeva niente, annullata fra la gente; aveva caldo, stava bene. Ogni tanto vedeva passare nell’aria un mazzetto di fiori, poi un altro, poi una pioggia di fiori: ogni tanto la folla si gettava da parte, per lasciar passare un equipaggio, dentro una signora bellissima, seduta in mezzo alle stoffe</span> <span class="invisible pageno target" id="page-029" title="029"></span><span>e ai fiori: visioni rapide, fuggevoli, fulgide, che quasi sgomentavano la bambina. Passò il tempo, così. Imbruniva: i fiori cadevano più lenti, il clamore era più basso, la folla si diradava. Accanto alla bimba passò una leggiadra apparizione di donna, dall’abito nero, succinto e ricco, dal volto bianco e sorridente, dagli enormi brillanti alle orecchie delicate: portava in mano un cestino di fiori, a mazzetti e disciolti. Era una fioraia meravigliosa, che accumulava denari nel fondo del cestino.</span></p>
+      <p class="pnext"><span>—&nbsp;Signora, signora&nbsp;—&nbsp;mormorò una voce infantile&nbsp;—&nbsp;dammi un fiore.</span></p>
+      <p class="pnext"><span>E la fioraia, con un moto gentile e svelto, lasciò cadere nelle mani della bimba un manipoletto di garofani. La bimba sorrise, ficcò un garofano in un bucherello della sua camicia e volle anch’essa vendere i fiori, poiché ne aveva tanti. Ma da lei la gente non ne comprava. Uno studente le disse: quando sarai più grande, potrai vender fiori. Un grasso signore si pose a declamare contro l’accattonaggio e contro</span> <span class="invisible pageno target" id="page-030" title="030"></span><span>l’inerzia della questura. La bimba non comprese il senso, ma inteso che la maltrattavano. Neppure</span> <em class="italics">lassù</em> <span>erano buoni con lei. Ella era lacera, scalza, brutta: i suoi grandi occhi spalancati mettevano paura, la sua testolina arruffata e selvaggia faceva paura. Ora la fame riappariva feroce, mettendole un fuoco nel petto, straziandola. Si trovava presso la</span> <em class="italics">Boulangerie française</em><span>, donde usciva un odore di pane e di pasticcini che la faceva svenire. Offriva i suoi fiori macchinalmente, senza poter più parlare, con un singhiozzo lento che le sollevava il petto. Un soldato passò e comprò un garofano: dette un soldo. La bimba entrò nella panetteria e comprò un panino da un soldo. Le bastava. Voleva andar via. Ricominciava ad aver paura. Quelle carrozze la stordivano, lei che voleva passare dall’altra parte. Prese la rincorsa, abbassando il capo... Nella carrozza una signora gittò un grido e svenne.</span></p>
+      <p class="pnext"><span>Ma sulla via, presso il marciapiede, agonizzava una innocente creatura, con la gambina</span> <span class="invisible pageno target" id="page-031" title="031"></span><span>sfracellata. Agonizzava, giacente fra i garofani che le si erano sparsi d’attorno, stringendone uno sul petto, tenendo il panino nell’altra mano, con la faccia bianca e seria, la bocca socchiusa, coi grandi occhi meravigliati e dolorosi che guardavano il cielo.</span></p>
+      <blockquote>
+        <div>
+          <div class="align-center auto-scaled block figure" style="width: 14%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/fineparag.png" /></div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><span class="invisible pageno target" id="page-032" title="032"></span> <span class="invisible pageno target" id="page-033" title="033"></span></p>
+      <div class="align-center auto-scaled block figure" style="width: 73%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/corn.png" /></div>
+    </div>
+    <div class="level-2 section" id="giuochi">
+      <h2 class="center level-2 pfirst section-title title"><a class="toc-backref" href="#id8"><span>GIUOCHI</span></a></h2>
+      <p class="pfirst"><span class="invisible pageno target" id="page-034" title="034"></span> <span class="invisible pageno target" id="page-035" title="035"></span></p>
+      <p class="pnext"><span>Era una grande casa di provincia, con un portone sempre chiuso, quello nobile, pei signori, che vi davano un forte picchio col battente&nbsp;—&nbsp;e un portone sempre spalancato, quello dove passavano i carri di grano, di vino, di carbone, di pasta. Sopra, gli stanzoni vasti, alti di soffitto, con le travi foderate di carta fiorata, coi muri dipinti di giallo chiaro o di lilla pallido. Alle finestre grandi e profonde, invece delle portiere di merletto, quelle strette tendine di mussola bianca, attaccate ai vetri. Mobili antichi e anneriti: scrivanie larghe, coperte di</span> <span class="invisible pageno target" id="page-036" title="036"></span><span>incerata nera, dai cassetti profondi; divani lunghi, angolosi, foderati di lana verde e come imbottiti di spini; armadii larghi quanto una parete, che si serravano con un piccolo catenaccio. Nelle cornici nere e tarlate certi quadri sanguinolenti: la battaglia di Solferino, Mazeppa, Marco Botzari&nbsp;—&nbsp;e certe incisioni sbiadite che rappresentavano il Tempio di Serapide a Pozzuoli, la Via dei Sepolcri a Pompei. Per ornamento, sui cassettoni, sotto le campane di cristallo, certi santi vecchi, vestiti da frati cappuccini. Il salone aveva le imposte sbarrate, immerso nella oscurità, proibito ai bambini; del resto, chiuso a chiave, aperto solo quando veniva una visita ufficiale.</span></p>
+      <p class="pnext"><span>Dalle otto del mattino alle due del pomeriggio, la casa era tranquilla e silenziosa, perchè i bimbi erano a scuola. A tavola il pispiglio era dominato da un appetito formidabile, appetito di bambini sani, grassi, forti: dopo, a dormire sino alle quattro, siesta obbligatoria di provincia. Dalle quattro alle cinque studiavamo</span> <span class="invisible pageno target" id="page-037" title="037"></span><span>quelle poche lezioni per il domani: alle cinque....</span></p>
+      <p class="pnext"><span>Alle cinque era la rottura delle file, la libertà, lo scoppio, la rivoluzione, i diavoli scatenati per la casa. Erano inutili le ammonizioni, le minacce, gli schiaffi: l’uno piangeva e gli altri ridevano, dopo un momento rideva anche lo schiaffeggiato. Le mamme, le nonne, le zie si disperavano, si chiudevano in cucina, si rifugiavano nella cappella. Agli otto bambini di casa&nbsp;—&nbsp;da sei a dodici&nbsp;—&nbsp;se ne univano altri sette od otto, piccoli parenti e piccoli amici, che arrivavano condotti dalle serve. Diventavamo un piccolo popolo di creature bionde o brune, insolenti di salute, dalle gambe grassotte, e nude, dalle guance dure e colorite, dai polmoni fortissimi. Piccolo popolo turbolento, sfrenato, che si allargava attraverso la casa e ne prendeva possesso in tutti gli angoli, in tutti i recessi. Avevamo allora per noi i cameroni vuoti dove si stendeva il bucato nei giorni di pioggia; le larghe terrazze sotto il sole, a cui</span> <span class="invisible pageno target" id="page-038" title="038"></span><span>arrivavamo, arrampicandoci per le ripide scalette di legno; la grande loggia del primo piano, piena di maggiorana e di basilico; avevamo la dispensa del cortile dove si conservavano i salami e i formaggi; avevamo i granai, festa della nostra infanzia, dove rotolavamo giù dalle montagne di grano, dove affondavamo nelle montagne di granone, dove mangiavamo l’uva secca e le mele acerbe. Era una corsa attraverso le stanze, un precipizio per le scale e le scalette, un galoppo di puledri sull’asfalto, una tromba rumoreggiante, squillante, ridente, attraverso la malinconia della casa.</span></p>
+      <p class="pnext"><span>Il preferito fra i giuochi, come dappertutto, eri a</span> <em class="italics">capinnascondere</em><span>. Con molta gravità ci mettevamo in cerchio nella stanza da pranzo e tiravamo a sorte, quello che doveva</span> <em class="italics">star sotto</em><span>. Se capitava a una bambina, faceva il muso e se ne andava borbottando a mettersi in un angolo, col viso rivolto al muro, con gli occhi chiusi per non vedere; se era un maschio, faceva il disinvolto e il sicuro di sè. Dopo</span> <span class="invisible pageno target" id="page-039" title="039"></span><span>esserci assicurati che quello</span> <em class="italics">sotto</em> <span>non poteva vederci, partivamo in punta di piedi, in gruppi di due, di tre, per nasconderci: ed era una ricerca muta e nervosa, inquieta e taciturna, di un nascondiglio impossibile. Bisognava trovare presto e bene: avere astuzia e audacia; avere fantasia e attività. Vi era il giuocatore egoista, che trovato un nascondiglio per sè, ne cacciava gli altri, col pretesto che facevano rumore e che lo</span> <em class="italics">scoprivano</em><span>; vi era il giuocatore immaginoso, che si ficcava negli armadi, fra le materasse, senza respirare, sorridendo in quella soffocazione; vi era il giuocatore incerto, che girava tutta la casa, senza trovare un cantuccio soddisfacente; vi era quello audace che si metteva semplicemente dietro una porta, dietro una poltrona, a due passi da quello</span> <em class="italics">celato</em><span>, con la magnifica certezza di non essere</span> <em class="italics">scoperto</em><span>, per le troppe probabilità di essere preso; e vi era finalmente quello sciocco, che si ficcava stupidamente sotto un letto. Quando tutti erano nascosti, si sentiva un griduccio lontano, stridulo, prolungato:</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-040" title="040"></span><span>—&nbsp;Vieni.....i!</span></p>
+      <p class="pnext"><span>Allora quello</span> <em class="italics">sotto</em> <span>si moveva con precauzione, non allontanandosi molto dal suo</span> <em class="italics">posto</em><span>, guardando a dritta, a sinistra, camminando a piccoli passi. Palpitavano i piccoli cuori nei nascondigli; dove erano nascosti due l’uno diceva all’altro:</span></p>
+      <p class="pnext"><span>—&nbsp;Non ci trova, no; è troppo scemo.</span></p>
+      <p class="pnext"><span>Finalmente quello</span> <em class="italics">sotto</em> <span>si risolveva a lasciare il</span> <em class="italics">posto</em> <span>e la stanza da pranzo: allora si schiudevano le porte, gli armadi, si scostavano le sedie, le scrivanie, e i</span> <em class="italics">nascosti</em> <span>fuggivano, al</span> <em class="italics">posto</em><span>, strillando la loro vittoria. Mentre quello</span> <em class="italics">sotto</em> <span>ne perseguitava uno, invano, gli altri sbucavano da tutte le parti, gridando, felici di non essere stati presi, correndo al</span> <em class="italics">posto</em><span>. Allora quello</span> <em class="italics">sotto</em> <span>se ne andava tranquillamente a guardare sotto i letti e trovava il bimbo sciocco, accovacciato, che non aveva osato fuggire e che si faceva prendere come un sorcio in trappola, chinando il capo e allungando il muso; noi gli dicevamo, ridendo:</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-041" title="041"></span><span>—&nbsp;Stupido, perchè ti sei messo sotto il letto? E non potevi scappare, quando</span> <em class="italics">lui</em> <span>è passato?</span></p>
+      <p class="pnext"><span>—&nbsp;Sapevo questo, io, che</span> <em class="italics">lui</em> <span>mi trovava&nbsp;—&nbsp;borbottava lo scemo, andandosi a metter</span> <em class="italics">sotto</em><span>.</span></p>
+      <p class="pnext"><span>Ma le partite più interessanti erano quando colui che stava</span> <em class="italics">sotto</em> <span>era molto furbo&nbsp;—&nbsp;Michele, per esempio, che poi è diventato medico. Allora noi ci riscaldavamo, facevamo un complotto nell’anticamera, per trovare un nascondiglio assurdo. Michele, dalla sala da pranzo, diceva con voce canzonatoria:</span></p>
+      <p class="pnext"><span>—&nbsp;Posso venire?</span></p>
+      <p class="pnext"><span>E noi, in coro, impazientiti:</span></p>
+      <p class="pnext"><span>—&nbsp;Non ancora, non ancora!</span></p>
+      <p class="pnext"><span>Infine decidevamo di ficcarci due o tre nel gallinaio, spaventando le galline; un altro paio dentro l’</span><em class="italics">arca</em><span>, dove s’impastava il pane, tenendone un po’ sollevato il coperchio per respirare; e qualcun altro saliva sopra gli armadii, a rischio di rompersi il collo: la più piccola, Adelina, si andava maliziosamente a ficcare</span> <span class="invisible pageno target" id="page-042" title="042"></span><span>dietro Mariagrazia, la serva che filava e non si moveva più per non</span> <em class="italics">scoprire</em> <span>Adelina. Allora quel furbo di Michele stava un poco a pensare, poi direttamente, come se qualcuno glielo avesse detto, andava al gallinaio e ne prendeva due pel collo, apriva l’</span><em class="italics">arca</em> <span>e ne prendeva un altro paio, diceva a quelli sull’armadio di scendere: e noi restavamo mortificati, chiedendogli:</span></p>
+      <p class="pnext"><span>—&nbsp;Come ci hai trovati? chi te lo ha detto? Quella birbona di Concetta, la cameriera?</span></p>
+      <p class="pnext"><span>—&nbsp;Ho capito&nbsp;—&nbsp;diceva lui, modestamente glorioso.</span></p>
+      <p class="pnext"><span>—&nbsp;Ma me, non m’hai chiappato&nbsp;—&nbsp;gridava Adelina, spuntando di dietro a Mariagrazia.</span></p>
+      <p class="pnext"><span>—&nbsp;T’avevo vista, ma non t’ho voluta prendere&nbsp;—&nbsp;diceva lui, sdegnoso e trionfante.</span></p>
+      <p class="pnext"><span>Sino a che un giorno, a questo malizioso e dispettoso Michele, pensammo di giocargli un tiro. In un granaio pieno di quadri vecchi e di mensole del primo Impero, vi era un canestrone rotondo, alto tre metri, come due botti di vimini, una sovrapposta all’altra. Ci si metteva</span> <span class="invisible pageno target" id="page-043" title="043"></span><span>la biancheria sporca. Per entrarvi dentro lo facemmo traboccare per terra, e vi entrammo, in sei, come nella bocca di un forno: poi premendo sul fondo, lo facemmo rialzare e restammo immobili, in fondo a questo pozzo rotondo. Ridevamo fra noi, perchè certo Michele non ci avrebbe mai trovati. Stavamo allo stretto, uno addosso all’altro, ma felici di aver burlato Michele. Appena Adelina si lamentava che le doleva un piede, qualcuno le mormorava:</span></p>
+      <p class="pnext"><span>—&nbsp;Zitto, bestia! ci farai scoprire.</span></p>
+      <p class="pnext"><span>Passava il tempo. Michele non veniva.</span></p>
+      <p class="pnext"><span>—&nbsp;Non ci trova, non ci trova&nbsp;—&nbsp;dicevamo sottovoce, ridendo.</span></p>
+      <p class="pnext"><span>Poi, cominciammo a seccarci. Poichè Michele non ci trovava, era meglio uscire di là e andargli a dire che era uno scemo, uno scemone, che gliel’avevamo fatta. Ma che! Noi premevamo sul fondo e il canestrone rimaneva ritto, con le sue pareti alte come quelle di una torre: non sapevamo rovesciarlo più, per uscirne. Le pareti contro cui battevamo per farlo voltare,</span> <span class="invisible pageno target" id="page-044" title="044"></span><span>scricchiolavano, ma noi pesavamo troppo sulla base. Prima ci guardammo tutti spaventati: poi Adelina pianse e strillò: poi piangemmo e strillammo tutti. Dopo un quarto d’ora di questa desolazione in fondo al canestro, vennero a liberarci Mariagrazia e Concetta, le serve, che rovesciarono il canestro e ci trassero fuori, esse ridendo, noi piangendo. Ma il più terribile dell’avventura fu questo: che quell’infame di Michele era venuto piano piano nel granaio, aveva capito che noi eravamo nel canestro e se n’era andato placidamente, prevedendo la nostra impossibilità di uscirne, a far merenda con un pezzo di pane e una fetta di prosciutto. Egli pel primo e poi tutti i parenti si burlavano di noi, anche lo zio cancelliere che era così serio, anche zio Gabriele che era paralitico. Fu una sconfitta famosa.</span></p>
+      <p class="pnext"><span>La</span> <em class="italics">mosca cieca</em> <span>veniva dopo. Tutto lo studio era di stringere bene il fazzoletto sugli occhi a quello che stava</span> <em class="italics">sotto</em> <span>e poi domandargli:</span></p>
+      <p class="pnext"><span>—&nbsp;Ci vedi?</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-045" title="045"></span><span>—&nbsp;No.</span></p>
+      <p class="pnext"><span>—&nbsp;Di’: quanto voglio bene a mammà, non ci vedo.</span></p>
+      <p class="pnext"><span>Ed egli giurava, e cominciava a brancolare, mentre noi scappavamo, facendo scambietti, capriole, accovacciandoci, sfuggendo come anguille: fra le risa convulse scoppiava il grido:</span></p>
+      <p class="pnext"><span>—&nbsp;Ci vede, ci vede! il giuoco non vale!</span></p>
+      <p class="pnext"><span>Poi, egli ne acchiappava una che si dibatteva, tenendola stretta:</span></p>
+      <p class="pnext"><span>—&nbsp;Chi è? Chi è?</span></p>
+      <p class="pnext"><span>—&nbsp;È Clelia.</span></p>
+      <p class="pnext"><span>—&nbsp;Bravo, Peppino, bravo! è Clelia!</span></p>
+      <p class="pnext"><span>Clelia andava</span> <em class="italics">sotto</em><span>. Ma alla semplice</span> <em class="italics">mosca cieca</em> <span>noi ne preferivamo una più complicata, quella con la spazzola. I bimbi e le bimbe si prendevano per la mano e facevano un circolo attorno a Clelia, ritta in mezzo, bendata, con la spazzola in mano. Dopo aver fatto due o tre giri in modo da confondere le idee di Clelia, ci fermavamo, tenendoci sempre per mano. Allora ella si accostava a una e cominciava a</span> <span class="invisible pageno target" id="page-046" title="046"></span><span>passarle delicatamente la spazzola sul viso, sul collo, sui vestiti. La spazzolata si inchinava avanti, si piegava indietro, si inginocchiava per non farsi riconoscere e fremeva di non poter ridere, per non fare sentire la sua voce, e si contorceva tutta, mentre gli altri erano convulsi di risate taciturne. Dopo avere molto spazzolato, Clelia pensava un poco e diceva:</span></p>
+      <p class="pnext"><span>—&nbsp;Ha il nastro nei capelli: è Cristina. E tutti scoppiando:</span></p>
+      <p class="pnext"><span>—&nbsp;Ma che Cristina, che Cristina! Giro, giro, giro!</span></p>
+      <p class="pnext"><span>La ronda ricominciava, si arrestava di nuovo, Clelia faceva passeggiare la sua spazzola sopra un altro viso, lungamente, producendogli il solletico. Si moriva dal ridere, allogandosi per non farsi udire. Finalmente Clelia, trionfante, esclamava:</span></p>
+      <p class="pnext"><span>—&nbsp;Ha il grembiule di mussola: è Matilde. Ma stanchi di questi giuochi, ne inventavamo una quantità, parodiando i</span> <em class="italics">grandi</em><span>. Giocando alle</span> <em class="italics">visite</em> <span>si udivano questi dialoghi:</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-047" title="047"></span><span>—&nbsp;Come sta il vostro bambino?</span></p>
+      <p class="pnext"><span>—&nbsp;Benissimo, ma ha sette anni e vuole succhiare ancora. E vostro marito, Carluccio, come sta?</span></p>
+      <p class="pnext"><span>—&nbsp;È troppo impertinente: lo metterò in collegio.</span></p>
+      <p class="pnext"><span>Si giocava all’</span><em class="italics">ammalato</em><span>. Adelina si stendeva sopra due sedie, Manuelita faceva la mamma disperata, Cesarino, con un paio d’occhiali fatti di buccia d’arancio e con voce burbera, diceva:</span></p>
+      <p class="pnext"><span>—&nbsp;Questa bambina sta male, ha mangiato troppe ciliege e troppa crema. Le darete due once di olio di ricino...</span></p>
+      <p class="pnext"><span>—&nbsp;Io non lo voglio!&nbsp;—&nbsp;strillava Adelina.</span></p>
+      <p class="pnext"><span>—&nbsp;E allora tu muori. Poi un poco di brodo, poi un pollo arrosto, poi un merluzzo allesso, poi un biscottino....</span></p>
+      <p class="pnext"><span>—&nbsp;Ne voglio cinque!&nbsp;—&nbsp;strillava Adelina.</span></p>
+      <p class="pnext"><span>—&nbsp;Figlia mia, figlia mia, mi fai disperare&nbsp;—&nbsp;diceva Manuelita.</span></p>
+      <p class="pnext"><span>Si giocava alla</span> <em class="italics">chiesa</em><span>, facendo l’altare con un tovagliolo sopra una panca, il ciborio con</span> <span class="invisible pageno target" id="page-048" title="048"></span><span>un organino ritto sulle pieghe. Ferdinando si metteva un berretto di carta e una pianeta tagliata da un giornale: poi usciva, con Carluccio dietro, per dire la messa. Noi eravamo le divote, inginocchiate, leggendo in certi libretti nostri, battendoci il petto. Spesso due divote chiacchieravano fra loro:</span></p>
+      <p class="pnext"><span>—&nbsp;Io ho piacere della messa di don Ferdinando, perchè è breve.</span></p>
+      <p class="pnext"><span>—&nbsp;E si capisce tutto. Sta dicendo il rosario?</span></p>
+      <p class="pnext"><span>—&nbsp;No, mi racomando alla Madonna Addolorata.</span></p>
+      <p class="pnext"><span>—&nbsp;Pregate per me!</span></p>
+      <p class="pnext"><span>—&nbsp;Indegnamente.</span></p>
+      <p class="pnext"><span>Dopo, seduto dentro un quadrato formato da quattro sedie, Ferdinando faceva il confessore nel confessionale: la penitente veniva tutta compunta:</span></p>
+      <p class="pnext"><span>—&nbsp;Padre, ho detto molte bugie.</span></p>
+      <p class="pnext"><span>—&nbsp;Hai fatto male, figlia: quante ne avrai dette? ventimila?</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-049" title="049"></span><span>—&nbsp;Più assai.</span></p>
+      <p class="pnext"><span>—&nbsp;Un milione?</span></p>
+      <p class="pnext"><span>—&nbsp;Oh padre! Ho anche rubato certi pezzettini di zucchero, dalla zuccheriera.</span></p>
+      <p class="pnext"><span>—&nbsp;Ora lo dico a mammà&nbsp;—&nbsp;esclamava Ferdinando, levandosi in piedi.</span></p>
+      <p class="pnext"><span>All’imbrunire, quando ci era venuta la stanchezza e la malinconia, ci riunivamo intorno a Mariagrazia.</span></p>
+      <p class="pnext"><span>—&nbsp;Mariagrazia, dicci un</span> <em class="italics">conto</em><span>! Un</span> <em class="italics">conto</em><span>. Mariagrazia, vogliamo il</span> <em class="italics">conto</em><span>!</span></p>
+      <p class="pnext"><span>E Mariagrazia, prendendosi Adelina e Peppino sulle ginocchia, lentamente, senza guardarci, con noi che la guardavamo negli occhi, ci raccontava la fiaba del</span> <em class="italics">Re serpe</em> <span>o quella del</span> <em class="italics">Re porco</em> <span>o quella della</span> <em class="italics">Schiava Saracina</em> <span>o il</span> <em class="italics">vero fatto accaduto</em> <span>di Fra Giovanni.</span></p>
+      <blockquote>
+        <div>
+          <div class="align-center auto-scaled block figure" style="width: 14%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/fineparag.png" /></div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><span class="invisible pageno target" id="page-050" title="050"></span> <span class="invisible pageno target" id="page-051" title="051"></span></p>
+      <div class="align-center auto-scaled block figure" style="width: 73%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/corn.png" /></div>
+    </div>
+    <div class="level-2 section" id="canituccia">
+      <h2 class="center level-2 pfirst section-title title"><a class="toc-backref" href="#id9"><span>CANITUCCIA</span></a></h2>
+      <p class="pfirst"><span class="invisible pageno target" id="page-052" title="052"></span> <span class="invisible pageno target" id="page-053" title="053"></span></p>
+      <p class="pnext"><span>Nella penombra, seduta sulla panca di legno, sotto la cappa nera ed ampia del focolare, Pasqualina, con le mani sotto il grembiule, recitava il rosario. Non si udiva che il</span> <em class="italics">pissi pissi</em> <span>delle labbra sibilanti le preghiere. La cucina tutta affumicata, con la larga tavola di legno verde&nbsp;—&nbsp;bruno, con la madia oscura, con le sedie a spalliera dipinta, senza un punto luminoso, s’immergeva nella notte. Il fuoco, semispento, covava sotto la cenere.</span></p>
+      <p class="pnext"><span>Un zoccolo di legno urtò contro la portella chiusa. Pasqualina si alzò ed aprì. Teresa, detta</span> <span class="invisible pageno target" id="page-054" title="054"></span><span>la</span> <em class="italics">capa de pezza</em> <span>perchè aveva servito le monache in un monastero di Sessa, entrò con la secchia dell’acqua sulla testa: si curvò un poco, perchè era alta, magra ed ossuta. Pasqualina l’aiutò a deporre la secchia per terra, e Teresa rimase un momento immobile, ma senza ansare, malgrado il peso enorme che aveva portato sul capo. Poi disciolse io strofinaccio che le era servito da cercine e lo stese sopra una sedia, perchè era bagnato fradicio. Ed era bagnato il fazzoletto di cotone che portava annodato sul capo e bagnati i cernecchi arruffati dei capelli grigi.</span></p>
+      <p class="pnext"><span>Intanto Pasqualina aveva acceso una di quelle lucerne di ottone a tre becchi, col lucignolo di bambagia che bagna nell’olio, tenendo in alto, sospesi con catenine di ottone, lo spegnitoio, le forbici da smoccolare e l’attizzatoio. Poi aveva aperto la madia, tagliato un lungo e grosso pezzo di pane bruno raffermo, ci aveva aggiunto un pezzetto di cacio forte e aveva dato a Teresa la cena.</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-055" title="055"></span><span>—&nbsp;E Canituccia?&nbsp;—&nbsp;chiese.</span></p>
+      <p class="pnext"><span>—&nbsp;Non l’ho vista.</span></p>
+      <p class="pnext"><span>—&nbsp;È tardi e quella malandrina non torna.</span></p>
+      <p class="pnext"><span>—&nbsp;Mo’ verrà.</span></p>
+      <p class="pnext"><span>—&nbsp;Terè, ricòrdati che domani, a tredici ore, devi andare a Carinola a portare quel sacco di granone.</span></p>
+      <p class="pnext"><span>—&nbsp;Gnorsì.</span></p>
+      <p class="pnext"><span>Senza mangiare, Teresa mise il pane e il cacio nella tasca profonda del grembiule. Rimase ancora un poco, con la bocca semi&nbsp;—&nbsp;aperta, tutto il volto inebetito, senza nessuna espressione, neppure quella della stanchezza.</span></p>
+      <p class="pnext"><span>—&nbsp;Me ne vado. Felice notte a signorìa.</span></p>
+      <p class="pnext"><span>—&nbsp;Felice notte.</span></p>
+      <p class="pnext"><span>E se ne andò lentamente verso la via della Croce, dove in una stanzuccia l’aspettavano quattro marmocchi con cui dovea pranzare.</span></p>
+      <p class="pnext"><span>Pasqualina restò sulla soglia e chiamò:</span></p>
+      <p class="pnext"><span>—&nbsp;Canituccia!</span></p>
+      <p class="pnext"><span>Nessuno rispose. La sera di una giornata di febbraio era discesa. Pasqualina si arrovellava</span> <span class="invisible pageno target" id="page-056" title="056"></span><span>a guardare nella oscurità. Chiamò di nuovo a distesa:</span></p>
+      <p class="pnext"><span>—&nbsp;Canituccia, Canituccia!</span></p>
+      <p class="pnext"><span>Allora, borbottando improperi, scese per la viottola che dalla porta di casa, tagliando in due parti l’orto, conduceva al portone. Lì guardò verso la via di Carinola, verso la traversa della Madonna della Libera, verso la unica via che taglia in due parti il piccolo villaggio di Ventaroli. Canituccia non si distingueva.</span></p>
+      <p class="pnext"><span>—&nbsp;Sarà morta ammazzata, quella tignosa&nbsp;—&nbsp;mormorò.</span></p>
+      <p class="pnext"><span>Un gemitìo sommesso le rispose. Canituccia era seduta sullo scalino del portone; accovacciata, col capo quasi tra le ginocchia e le mani nei capelli, lamentandosi.</span></p>
+      <p class="pnext"><span>—&nbsp;Ah, stai qua? E non rispondi, che tu possa essere impiccata? Dì? perchè piangi? T’hanno bastonata? E Ciccotto dove sta?</span></p>
+      <p class="pnext"><span>Canituccia, una bambina di sette anni, non rispose e si lamentò più forte.</span></p>
+      <p class="pnext"><span>—&nbsp;Perchè sei venuta così tardi? E Ciccotto?</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-057" title="057"></span><span>Dì la verità, hai perduto Ciccotto?&nbsp;—&nbsp;e la voce rabbiosa di quella vecchia zitella contadina divenne tremenda.</span></p>
+      <p class="pnext"><span>Canituccia si gettò per terra bocconi, con le braccia aperte, singhiozzando. Aveva perduto Ciccotto.</span></p>
+      <p class="pnext"><span>—&nbsp;Ah, scellerata, assassina della casa mia, figlia di mala femmina, che non sei altro! Hai perduto Ciccotto? E tieni. Hai perduto Ciccotto? E piglia. Hai perduto Ciccotto? E afferra.</span></p>
+      <p class="pnext"><span>La caricava di pugni, di calci e di schiaffi. Canituccia si dibatteva, si avvoltolava, strillava, ma senza piangere. Quando Pasqualina si fu stancata, le dette uno spintone e disse con voce arrantolata:</span></p>
+      <p class="pnext"><span>—&nbsp;Senti, malandrina, io ti tengo in casa per carità: se mo’ non ti parti e non vai cercando Ciccotto per la campagna, se non lo riporti a casa, ricordati che ti faccio morire crepata sulla via, come una figlia di cagna che sei.</span></p>
+      <p class="pnext"><span>E Canituccia, strillando ancora per le busse avute, coi piedi scalzi, rialzando il suo cencio</span> <span class="invisible pageno target" id="page-058" title="058"></span><span>di panno rosso, si avviò verso la strada della Libera. Camminava guardando a destra ed a sinistra, nelle siepi, nei campi coltivati, chiamando Ciccotto a bassa voce. Lo aveva perduto, tornando a casa: non si era accorta che Ciccotto non la seguiva più. Ma nella notte non distingueva nulla. Camminava macchinalmente: fermandosi ogni tanto a guardare, senza vedere. I suoi piedi nudi, diventati color di polmone pel freddo di una intiera invernata, non sentivano più il terreno che si faceva glaciale, nè le pietre dove inciampava. Non aveva paura della notte, della campagna solitaria: non voleva che ritrovare Ciccotto. Udiva solo le parole di Pasqualina, che le dicevano non avrebbe mangiato se non riportava Ciccotto. Aveva una fame acerba e intensa che le torceva lo stomaco. Se riportava Ciccotto, avrebbe mangiato. Questo solo pensava, questo solo. E chiamava, chiamava, camminando rapidamente fra le alte siepi, punto minuscolo che si agitava in quella calma notturna:</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-059" title="059"></span><span>—&nbsp;Ciccotto bello, Ciccotto mio, Ciccotto di Canituccia tua, dove stai? Ciccotto, Ciccotto, Ciccotto, vieni da Canituccia! Se non ti porto a casa, mamma Pasqualina non mi dà da mangiare. O Ciccotto, o Ciccotto!</span></p>
+      <p class="pnext"><span>Era uscita sulla via maestra che mena a Cascano, a Sessa, a Sparanisi. Nella oscurità la via biancheggiava, e la piccola ombra di quella bambina desolata prendeva contorcimenti strani sulla terra. La voce le si affannava. Correva all’impazzata, ora, chiamando Ciccotto con tutte le forze. Due volte, disfatta, disperata, sedette per terra: due volte riprese la corsa. Finalmente, nel campo di Antonio Jannotta, udì come un piccolo grugnito, poi un piccolo galoppo, e Ciccotto venne a lambirle i piedi col grugno.</span></p>
+      <p class="pnext"><span>Ciccotto era un porcellino bianco&nbsp;—&nbsp;roseo, con una macchia grigia sulla schiena, grassottello e rotondetto. Canituccia gridò dalla gioia, prese nelle braccia Ciccotto e se ne tornò indietro, con l’ultimo sforzo delle sue gambe di bambina</span> <span class="invisible pageno target" id="page-060" title="060"></span><span>Rideva, parlava, si stringeva al petto Ciccotto per non farlo scappare, e Ciccotto, con le corte gambe pendenti, grugniva tranquillamente. Canituccia correva di nuovo, pensando che avrebbe mangiato. Di lontano vide la figura di Pasqualina sul portone e a tiro di voce le gridò:</span></p>
+      <p class="pnext"><span>—&nbsp;Ho trovato Ciccotto, ho trovato Ciccotto bello!</span></p>
+      <p class="pnext"><span>Ben presto raggiunse Pasqualina e le consegnò trionfalmente il porcellino. Pasqualina, all’oscuro, sorrideva. Rientrarono in casa e Ciccotto fu portato nel suo stabbiolo, dove mangiò e si addormì immediatamente. Canituccia, ansante, aveva seguito tutte quelle operazioni. Aveva fame anche lei come Ciccotto. Seguì Pasqualina in cucina, guardandola coi suoi grandi occhi selvaggi che non sapevano chiedere. Poi sedette sullo scalino del focolare, senza dir nulla. La contadina si era seduta sulla panca ed aveva ricominciato il suo rosario. Pregava monotonamente</span><a class="footnote-reference" href="#id4" id="id2" name="id2"><sup>1</sup></a> <span>e senza fervore. La</span> <span class="invisible pageno target" id="page-061" title="061"></span><span>bambina, curva per non sentire lo spasimo dello stomaco, seguiva con gli occhi quella preghiera. Non pensava neppure più: aveva semplicemente e unicamente fame. Solo dopo mezz’ora, quando la</span> <em class="italics">Salve Regina</em> <span>fu recitata, Pasqualina si alzò, aprì la madia, tagliò un pezzo di pane, raccolse in un piattello certi fagiuoli freddi e dette il pranzo a Canituccia. Costei, seduta sempre sullo scalino del focolare, mangiò avidamente. Aveva una testa piccola, con una faccia minuta e bianca, tutta macchiata di lentiggini, con certi capelli ispidi, un po’ rossi, un po’ giallastri, un po’ castagno sporco: una testa troppo piccola sopra un corpo molto magro. Portava una camicia di cotone bianco tutta toppe, un corpetto di teletta marrone e per gonnella un panno rosso, tenuto su alla cinta da una cordicella. Si vedevano le gambe stecchite: si vedeva il collo nudo e magro, dove i tendini parevano corde tese. Mangiava con un cucchiaio di legno nero. Dopo andò a bere alla secchia.</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-062" title="062"></span><span>—&nbsp;Vattene a dormire&nbsp;—&nbsp;disse Pasqualina, che aveva preso la conocchia e filava.</span></p>
+      <p class="pnext"><span>Canituccia aprì la porticina della dispensola, dove si conservavano le mele, buttò via il panno rosso, si sdraiò sopra un paglioncino gramo, si tirò un cencio di coperta gialla sui piedi e si addormentò. Pasqualina filava e pensava con una certa diffidenza a Canituccia. Questa servetta era la figlia bastarda di Maria la</span> <em class="italics">rossa</em><span>: Maria, dai capelli ardenti e dalle labbra di garofano, aveva peccato prima con Giambattista, il calzolaio; Giambattista era andato a fare il soldato e Maria era divenuta l’amante di Gasparre Rossi, un signore. Poi anche Gasparre aveva abbandonata Maria, malgrado si dicesse che Candida, detta per diminutivo Canituccia, fosse figlia di lui. È certo che quella Maria, dopo essere stata un mese a Sessa, aveva lasciato Canituccia e se n’era andata, chi diceva a Capua, chi diceva a Napoli, a far vita disonesta. Gasparre non si era voluto curare della bambina abbandonata, la quale venne su in</span> <span class="invisible pageno target" id="page-063" title="063"></span><span>casa Zampa, Pasqualina e Crescenzo Zampa, fratello e sorella. Ma il volto bianco macchiato di lentiggini ricordava sempre la sua mamma, la</span> <em class="italics">rossa</em><span>, e Pasqualina, zitella, casta, magra, dalle mani nodose e rosse, dai denti gialli, dagli occhi neri di carbone, che non si era maritata perchè Crescenzo le aveva negato la dote, fremeva di terrore isterico, pensando alle follie amorose di Maria la</span> <em class="italics">rossa</em><span>, e diffidava della piccola bastarda</span><a class="footnote-reference" href="#id5" id="id3" name="id3"><sup>2</sup></a><span>.</span></p>
+      <p class="pnext"><span>Così, il giorno seguente, temendo che Canituccia non perdesse di nuovo Ciccotto, con una funicella legò da un capo il piede di Ciccotto, dall’altro legò la vita di Canituccia, perchè non avessero a separarsi. Il porcellino sgambettava dietro la bambina per andare al pascolo. Passavano la giornata insieme, nei campi, cercando le prime erbe. Molte volte Canituccia attirava Ciccotto verso un posto dove aveva visto l’erba che poteva piacergli: qualche volta Ciccotto trascinava Canituccia verso un campo verde. A mezzogiorno la bambina mangiava un</span> <span class="invisible pageno target" id="page-064" title="064"></span><span>pezzo di pane. Erravano insieme nel pomeriggio di primavera, sino all’imbrunire. Non si lasciavano che alla casa, quando Ciccotto andava a dormire, e Canituccia, dopo avere ingoiato una minestra di cicoria fredda, o pochi ceci, o un po’ di cotenna col pane, andava anch’essa a dormire. Certo Pasqualina non era più avara e più feroce di altre contadine, ma ella stessa non era agiata e non mangiava un pezzetto di carne che la domenica. Batteva qualche volta Canituccia, ma non più che le altre contadine battessero le proprie creature.</span></p>
+      <p class="pnext"><span>Più tardi, nell’estate, Canituccia e Ciccotto stavano più lungamente insieme. Se ne andavano all’alba a cercare granone, fichi e mele primaticce cadute dagli alberi, poichè Ciccotto era diventato forte, grande e grosso, mentre Canituccia rimaneva magra e debole. Talvolta Ciccotto correva troppo per la bambina e questa si sentiva trascinare, spossata sotto il sollione bruciante, sulla terra secca e screpolata.</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-065" title="065"></span><span>—&nbsp;Aspetta, Ciccotto, aspetta, bello mio&nbsp;—&nbsp;diceva, sfinita.</span></p>
+      <p class="pnext"><span>Poi Ciccotto si metteva a dormire e la bambina si stendeva per terra, lungo i solchi del grano mietuto, con gli occhi chiusi, sentendo sotto le palpebre la vampa bruciante del sole. Si rialzava stordita, con le guance rosse e la lingua gonfia. Ora non ci era più bisogno della funicella, perchè Ciccotto si era fatto ubbidiente: solo che Canituccia si era provveduta di un lungo ramoscello per regolare il cammino di Ciccotto e non farlo andare sotto le ruote dei carri che passavano per la via maestra. Ritornavano alle ventiquattro. Ciccotto lentamente, Canituccia un po’ più innanzi spinta dalla insaziabile fame che le mordeva lo stomaco. Una volta aveva provato a rubare certe sorbe acerbe nel campo di Nicola Passaretti, ma le sorbe erano amarissime e Nicola l’aveva picchiata come una piccola ladra. Anzi Nicola ne aveva detto a Pasqualina Zampa, che aveva anch’essa battuta Canituccia. La bambina se n’era andata</span> <span class="invisible pageno target" id="page-066" title="066"></span><span>pei campi con Ciccotto, piangendo e dicendogli:</span></p>
+      <p class="pnext"><span>—&nbsp;Pasqualina m’ha battuto perchè sono una ladra.</span></p>
+      <p class="pnext"><span>Ma Ciccotto aveva scosso il capo e si era messo a pascolare. Pure, ogni tanto, quando nella mente chiusa di Canituccia sorgeva una idea, lei ne parlava a Ciccotto. Quando se ne tornavano a casa, gli teneva questo discorso:</span></p>
+      <p class="pnext"><span>—&nbsp;Mo’, andiamo alla casa e Ciccotto se ne va alla stalla e mamma Pasqualina gli dà la cena e poi mamma Pasqualina dà la minestra a Canituccia, che se la mangia tutta tutta.</span></p>
+      <p class="pnext"><span>E la mattina:</span></p>
+      <p class="pnext"><span>—&nbsp;Se Ciccotto non corre, se se ne sta sempre vicino a Canituccia, Canituccia lo porta alla Montagna Spaccata, all’</span><em class="italics">arbusto</em> <span>di don Ottaviano il parroco e gli fa mangiare tante tante mele, mentre Canituccia si mangia il pane.</span></p>
+      <p class="pnext"><span>Quando venne l’autunno, Ciccotto si era fatto molto grasso e un po’ pesante. Una volta, con un colpo di testa, buttò a terra la bambina che si rialzò, si allontanò e gli scagliò una</span> <span class="invisible pageno target" id="page-067" title="067"></span><span>sassata. Ma fu l’unica loro lite. Canituccia mangiava sempre meno e Pasqualina era sempre più aspra con la figlia della</span> <em class="italics">rossa</em><span>, poichè la raccolta era stata cattiva e la casta zitella aveva un terribile sospetto, che suo fratello Crescenzo avesse preso una relazione amorosa con Rosella di Nocelleto: erano spariti dalla dispensa due caciocavalli e un prosciutto: poi Crescenzo aveva comperato al mercato di Sessa, per tre lire, un anello d’oro. Nella casa, Pasqualina diventava sempre più rabbiosa e avara. Se la prendeva con Teresa la serva, con Giacomo l’ortolano, con Canituccia, con tutti. L’ultima domenica, don Ottaviano non aveva voluto darle la comunione per i tanti peccati di pensiero.</span></p>
+      <p class="pnext"><span>Poi pioveva sempre e ogni giorno Ciccotto e Canituccia ritornavano a casa bagnati fradici. Canituccia si metteva il panno rosso sul capo, ma rimaneva con la sola camicia attorno alle gambe, camminava nelle pozze d’acqua e fango, sferzata dalla pioggia, dicendo a Ciccotto:</span></p>
+      <p class="pnext"><span>Corriamo, Ciccotto bello di Canituccia,</span> <span class="invisible pageno target" id="page-068" title="068"></span><span>corriamo, perchè piove e ho tutto il corpetto bagnato, Corriamo, perchè a casa ci sta il fuoco e ci scalderemo.</span></p>
+      <p class="pnext"><span>Ma spesso il fuoco era spento e Canituccia andava a dormire, ancora inzuppata dalla pioggia. In quel mese di novembre, dissero in Ventaroli che Maria la</span> <em class="italics">rossa</em> <span>era morta a Capua di una tifoidea, e il parroco, dopo la messa, aveva portato l’esempio nella predica, facendo arrossire Concetta di Raffaele Palmese e Nicoletta di Peppino Morra che avevano qualche rimorso sulla coscienza. Dissero a Canituccia che la madre era morta, ma lei non capì nulla e stette ad ascoltare come una stupida.</span></p>
+      <p class="pnext"><span>In quel mese, però, Ciccotto era diventato così grasso e grosso, che non si poteva più menarlo a pascolare molto lontano: passeggiava gravemente. Invano Canituccia lo chiamava: esso non aveva più forza. La prima volta che lo lasciò per andare alla montagna a far legna, Canituccia nel bosco gli raccolse una quantità di ghiande e gliele portò in uno strofinaccio.</span> <span class="invisible pageno target" id="page-069" title="069"></span><span>Prima di uscire per correre alla fontana, per portare il mangiare a Crescenzo nei campi o per altro incarico, essa andava a dare un’occhiata a Ciccotto. Ritornando, prima di entrare in cucina, andava di nuovo a salutarlo. Si sgomentava un poco a vederlo così grosso, tanto più di lei, che era sottile come un manico di scopa.</span></p>
+      <p class="pnext"><span>Una sera, nel dicembre, venendo dalla fontana, trovò don Ottaviano il parroco, Nicola Passaretti e Crescenzo che discutevano vivamente: questi tre andarono poscia a visitare Ciccotto e parlarono di nuovo. Lei non comprese. Ma la sera del giorno seguente venne da Carinola Sabatino il macellaio e a Teresa si aggiunse Rosaria, la serva di Gasparre Rossi. Vi era una grande agitazione nel cortile e nella cucina: sul focolare una grande caldaia sopra un fuoco vivissimo: tutt’i grandi piatti, tutte le catinelle, tutt’i secchi disposti: in un angolo la stadera: sulla tavola coltelli, coltellacci, imbuti: Pasqualina, Teresa, Rosaria con le gonne succinte e i grembiuli bianchi. Sabatino andava e</span> <span class="invisible pageno target" id="page-070" title="070"></span><span>veniva con un’aria d’importanza. Canituccia guardava tutto e non capiva. Poi chiese sottovoce a Teresa:</span></p>
+      <p class="pnext"><span>—&nbsp;Che facciamo stanotte?</span></p>
+      <p class="pnext"><span>—&nbsp;È venuto Natale, Canitù. Ammazziamo Ciccotto.</span></p>
+      <p class="pnext"><span>Allora, traballando un poco, Canituccia andò ad accovacciarsi in un angolo del cortile per vedere ammazzare Ciccotto. Vide al vagante lume che lo trascinavano in cortile, che Nicola Passaretti e Crescenzo lo tenevano. Udì i grugniti disperati di Ciccotto che non voleva morire, vide il coltello di Sabatino che lo ferì nella gola. Vide che gli tagliavano la testa, in tondo in tondo, al collo, e che la deponevano sopra un piatto con un sostrato di lauro fresco. Poi vide squartarne il corpo in due parti e pesarle sulla stadera; udì le esclamazioni di gioia al risultato: un cantaio e sessanta rotoli. Ella rimase all’oscuro, nel cortile, nell’angolo. Passò il tempo, in quella notte di dicembre gelata. La chiamarono in cucina. Rosaria e Teresa,</span> <span class="invisible pageno target" id="page-071" title="071"></span><span>coi piccoli imbuti, ficcavano nei budelli la carne della salsiccia. Sabatino e Crescenzo badavano ai prosciutti e ai pezzi di lardo, mentre Nicola sorvegliava nel caldaione i lardelli bianchi che si squagliavano, diventando strutto e siccioli. Pasqualina, sopra un angolo del focolare, faceva friggere del sangue nel tegame. Tutti parlottavano vivamente, allegramente, presi dalla gioia di quella carne, di quel grasso, di quella prosperità, infiammati dal fuoco e dal lavoro. Canituccia restava sulla soglia, guardando, senza entrare. Allora Pasqualina, pensando che la bambina non mangiava da un giorno e che era momento di festa, prese un pezzo di pane nero, vi mise su un pezzetto di sangue fritto e disse a Canituccia:</span></p>
+      <p class="pnext"><span>—&nbsp;Mangia questo.</span></p>
+      <p class="pnext"><span>Ma Canituccia che moriva di fame, disse di no, semplicemente, col capo.</span></p>
+      <blockquote>
+        <div>
+          <div class="align-center auto-scaled block figure" style="width: 14%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/fineparag.png" /></div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><span class="invisible pageno target" id="page-072" title="072"></span> <span class="invisible pageno target" id="page-073" title="073"></span></p>
+      <div class="align-center auto-scaled block figure" style="width: 73%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/corn.png" /></div>
+    </div>
+    <div class="level-2 section" id="profili">
+      <h2 class="center level-2 pfirst section-title title"><a class="toc-backref" href="#id10"><span>PROFILI</span></a></h2>
+      <p class="pfirst"><span class="invisible pageno target" id="page-074" title="074"></span> <span class="invisible pageno target" id="page-075" title="075"></span></p>
+      <p class="pnext"><span>Ella porta quel poetico e soave nome che Leopardi ha amato: Nerina. E in tutta la persona di questa fanciulletta alta e sottile è diffuso un mite riflesso di poesia. La mollezza dei capelli castagni, abbandonata in lunghe anella sulle spalle, lascia libera una fronte larga, bianca e spirituale: fronte pensierosa, come i grandi occhi bruni, egiziani; occhi limpidi e profondi, pieni di calma, a cui un principio di miopia dà, talvolta, una incertezza come di sogno, o una finezza elegante di sguardo. Il profilo è corretto, delicato, già femminile: mentre la boccuccia</span> <span class="invisible pageno target" id="page-076" title="076"></span><span>rimane ancora infantile, labbrucce fresche e rosate, tutte ingenue, senza sapienza di sorriso, che si gonfiano ancora per una stizza, per fare il broncio, per piangere. La voce fiorisce lenta ed espressiva con qualche intonazione bassa di malinconia: una voce che pensa, parlando. Più volentieri ella ascolta, con la testolina reclinata, gli occhi intenti e ombreggiati dalle ricche ciglia castane, la bocca schiusa. Si lascia andare, stancamente affettuosa, con la testa appoggiata sul petto della madre o del padre, le mani pendenti lungo lo strano abito tonaca dell’adolescenza che ha qualche cosa di misticamente bizantino, nelle sue linee diritte. Ella ama tutte le cose di pensiero e d’immaginazione: le lunghe letture in un cantuccio di salotto l’attraggono irresistibilmente, una conversazione letteraria l’assorbisce, la contemplazione di un quadro se la prende tutta. Una sera la fantasmagoria del ballo</span> <em class="italics">Excelsior</em> <span>la inebriò; un giorno, a Venezia, sulla piazzetta di S. Marco, ella si mise a supplicare suo padre, con le lagrime</span> <span class="invisible pageno target" id="page-077" title="077"></span><span>agli occhi, perchè non la portasse mai più via da quel paese così bello. Ella ha una intelligenza squisita e gentile, che impara presto le cose dove l’intuizione vale più del ragionamento e dove il gusto predomina sulla dimostrazione: e spesso questa gentilezza è attraversata da una corrente d’ingenuità, quell’impensato meraviglioso dell’infanzia. Infine ella è una creatura semplice, un po’ timida, raccolta in sè, serena, tutta spirituale.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>La malìa di quel piccolo Ruggero sta negli occhi. Sono occhi di un nero carico, intenso, vellutato, dall’iride larga e carezzevole, dalla cornea azzurrina, dalle ciglia lunghe e quasi femminili; bizzarri occhi che scintillano di malizia; fieri occhi pensierosi, il cui sguardo che si solleva lento lento, pare che arrivi da lunghe contemplazioni misteriose; languidi occhi seduttori</span> <span class="invisible pageno target" id="page-078" title="078"></span><span>che si socchiudono, come in una stanchezza. Questo piccoletto ha la pelle bruna, di un bruno caldo e fiorente, i capelli piantati rudemente sulla fronte, le sopracciglia nere e sottili, la bocca rossa e viva come un garofano: bruno il collo libero nel colletto alla marinara, brune le gambe nude e nervose. Ma il viso delicatamente ovale è divorato da quegli occhioni singolari che vi turbano, tanto sono dotati di fascino. E dietro la singolarità di questi occhi, che a volte sembrano quelli di una andalusa vivace, a volte quelli di un arabo ravvolto nel</span> <em class="italics">burnous</em><span>, vi è un bizzarro temperamento di fanciullo. Egli non vuole essere baciato: non bacia mai. Se gli parlate come a un bambino, egli vi guarda serio serio, volta le spalle e se ne va. Di giocattoli non ne vuole. Bisogna fargli un bel ragionamento, logico, tranquillo, parlandogli come a un grande: allora vi risponde, quetamente, certe cose profonde che egli pensa. Non provate a raccontargli delle storie, delle fiabe: è lui che ve ne racconta, che le</span> <span class="invisible pageno target" id="page-079" title="079"></span><span>inventa, forse. Si pianta ritto innanzi a voi, concentrato, guardandosi la punta delle scarpe, coll’indice appuntato all’angolo delle labbra, e vi dice sottovoce, come se parlasse a se stesso, la fiaba, la leggenda. Ogni tanto si degna benignamente di spiegarvi qualche particolare—perchè l’orco,</span> <em class="italics">alle volte</em><span>, è buono—perchè quella era</span> <em class="italics">proprio</em> <span>una buona ragazza—e continua, allargando i confini del racconto, inventando, fantasticando, come se creasse. Se lo interrompete, si turba, vi dà un’occhiata fra il diffidente e il severo: ricomincia, senza badare a quello che gli avete chiesto. Quello che abbonda in lui è una immaginazione quasi orientale, piena di sogni: è una virilità di volontà inflessibile. Egli vi dice: imparerò a nuotare l’anno venturo, quando sarò</span> <em class="italics">proprio</em> <span>un uomo. È il più piccolo fra i due fratellini: ma il più grande, Paolo, è un bambinone biondo e grassoccio, bianco, roseo e liscio come una mela, dagli occhi azzurri e timidi, che parla poco, sorride spesso e se ne sta, placido, placido,</span> <span class="invisible pageno target" id="page-080" title="080"></span><span>lasciandosi proteggere da Ruggero che è il più piccolo. Ruggero dà la mano a Paolo per condurlo a scuola, lo scansa dalle carrozze, lo difende contro il maestro che vuol metterlo in castigo e se lo abbraccia stretto stretto, dicendogli di non piangere.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>Sono due cuginette, non si rassomigliano, ma sembrano una persona sola. Laura ha i capelli di un biondo dorato, in due trecce giù per le spalle: Beatrice li ha d’un biondo cenere, molto dolci alla vista, molto fini al tatto, riuniti in un nodo sulla nuca. Laura ha gli occhi di un azzurrino vivo, un po’ severi, un po’ socchiusi: Beatrice li ha d’un azzurro latteo, soave, molto aperti e molto sorpresi. Laura ha il viso ovale, una bocca di donna, dalle sinuosità di sfinge che tace e non sorride: Beatrice ha le guancie rotonde e come la bocca</span> <span class="invisible pageno target" id="page-081" title="081"></span><span>ride o sorride sempre, tutta gaiezza, le si formano due fossette. Laura ha un piede piccolo, una gamba elegante, la scarpetta con la fibbia e la calza di seta. Beatrice ha il piede lungo e arcuato nello stivalino alto da bambina. Non si rassomigliano: ma l’una non può andare senza l’altra, e chi vede Beatrice desidera di vedere Laura. Vestono di rosa&nbsp;—&nbsp;pallido, di azzurro smorto, sempre eguali: Laura ha un cerchiolino d’argento al braccio, Beatrice un anelluccio, un rubino al dito. Laura è più seria, più malinconica, risponde brevemente, con prontezza, con acutezza di donna: Beatrice è più allegra, più fanciullona, più improvvisamente infantile nelle domande. Laura ama la musica e l’ascolta quetamente: Beatrice si entusiasma della poesia. Laura ha più gusto: Beatrice ha più calore. Quando stanno insieme, si tengono per mano, o vanno a braccetto, le spalle che si sfiorano, le testoline bionde che si avvicinano. E hanno fra loro motti speciali, intonazioni di voce, sorrisi arguti, sguardi fuggevoli,</span> <span class="invisible pageno target" id="page-082" title="082"></span><span>parolette sussurrate, per cui s’intendono a volo. S’intendono e si completano: e sembrano una fanciulla sola, bella, buona, intelligente, una sola anima poetica che abbia preso due forme: Laura&nbsp;—&nbsp;Beatrice.</span></p>
+      <div class="align-center auto-scaled block figure" style="width: 73%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/corn.png" /></div>
+    </div>
+    <div class="level-2 section" id="alla-scuola">
+      <h2 class="center level-2 pfirst section-title title"><a class="toc-backref" href="#id11"><span class="invisible pageno target" id="page-083" title="083"></span><span>ALLA SCUOLA</span></a></h2>
+      <p class="pfirst"><span class="invisible pageno target" id="page-084" title="084"></span> <span class="invisible pageno target" id="page-085" title="085"></span></p>
+      <p class="pnext"><span>Aspettavamo i giorni di tirocinio con una ansietà segreta. I giorni di lezione erano monotoni, spesso tristi. Noi studiavamo senza voglia, malamente, con programmi incerti, con professori troppo severi o assolutamente inetti. Eravamo già maestre e l’essere trattate da scolarette ci umiliava, ci stizziva. A casa, qualcuna di noi aveva la povertà, quasi tutte una miseria decente—e chi un fratello ebete, chi un padre paralizzato, chi una matrigna tormentatrice, qualche piaga celata con cura, qualche vergogna nascosta con una nobile pietà, qualche</span> <span class="invisible pageno target" id="page-086" title="086"></span><span>infelicità, qualche ingiustizia del destino, a cui la rassegnazione era completa. Non erano allegri i nostri diciotto anni, e le aride lezioni di aritmetica, di pedagogia, di geografia, finivano col ravvolgerci in un ambiente di malinconia.</span></p>
+      <p class="pnext"><span>Ma il tirocinio ci salvava dalla tetraggine, rompendo la monotonia, dandoci un giorno di pausa. Eravamo trenta e ne scendevano tre al giorno al pianterreno, nelle scuole elementari: così il turno capitava ogni dieci giorni. In questo benedetto decimo giorno, le tirocinanti indossavano l’abito nuovo se lo avevano, e se non lo avevano, mettevano un colletto pulito, un fiocco di nastro per cravatta: si pettinavano meglio, qualcuna si faceva i ricciolini. Entravano in classe alle otto, dicevano la preghiera, segnavano la</span> <em class="italics">presenza</em> <span>sul registro, e stavano lì, distratte, con gli occhi trasognati, aspettando le nove per andar giù, mentre le amiche mormoravano:</span></p>
+      <p class="pnext"><span>—&nbsp;Beate voi che andate al tirocinio!</span></p>
+      <p class="pnext"><span>Risalivano alle due, molto riscaldate in volto,</span> <span class="invisible pageno target" id="page-087" title="087"></span><span>coi capelli un po’ arruffati, con gli occhi lucenti, stanche, ma felici, felici di quelle ore passate fra le bimbe, felici di quel primo contatto, di quelle prime lezioni date timidamente, contente di quella nuova dignità conquistata. E narravano alle altre quello che avevano spiegato alle piccine, l’addizione sul pallottoliere, i dittonghi e la maglia di calza: dicevano che le piccine erano tanto carine, tanto intelligenti, alcune tranquille, alcune insolenti, che la maestra titolare lasciava fare tutto alla tirocinante, che insegnare era un po’ duro, ma che infine diventava un piacere. Poi venivano i caratteri delle piccole descritti minutamente: Orefice è buona, ma è stupida e si succhia il mignolo: bisogna tenerla sempre d’occhio&nbsp;—&nbsp;Abbamonte è bellina, ma è zoppa, poveretta, non può fare la ginnastica&nbsp;—&nbsp;Chiarizia è insolente, risponde male e brontola, ma è figlia di un segretario municipale, non si può sgridarla molto.&nbsp;—&nbsp;Tutte quelle che avevano fatto il tirocinio prima di me, mi avevano detto:</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-088" title="088"></span><span>—&nbsp;Quando andrai giù, Aloe ti farà dannare.</span></p>
+      <p class="pnext"><span>—&nbsp;Aloe ha un diavolo per capello.</span></p>
+      <p class="pnext"><span>—&nbsp;Se non ci fosse Aloe, la classe sarebbe tranquilla.</span></p>
+      <p class="pnext"><span>—&nbsp;Dovrebbero cacciarla, Aloe: è un demonio di malignità.</span></p>
+      <p class="pnext"><span>—&nbsp;Aloe è terribile.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>Finalmente andai io: traversai il giardinetto della ginnastica e mi fermai innanzi alla porta vetrata della classe, con una certa trepidazione. Sullo scalino una bimba era accoccolata, col capo chinato; ma non piangeva.</span></p>
+      <p class="pnext"><span>—&nbsp;Che fai qui?&nbsp;—&nbsp;le chiesi, dandomi un tono d’autorità.</span></p>
+      <p class="pnext"><span>—&nbsp;Sono arrivata tardi&nbsp;—&nbsp;rispose a bassa voce, senza guardarmi in volto&nbsp;—&nbsp;e la maestra non ha voluto farmi entrare.</span></p>
+      <p class="pnext"><span>—&nbsp;Perchè non te ne vai a casa?</span></p>
+      <p class="pnext"><span>—&nbsp;Perchè mamma non ci sta, a casa, adesso.</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-089" title="089"></span><span>—&nbsp;E dove sta mamma?</span></p>
+      <p class="pnext"><span>—&nbsp;Alla fabbrica del tabacco.</span></p>
+      <p class="pnext"><span>—&nbsp;Come si chiama mamma?</span></p>
+      <p class="pnext"><span>—&nbsp;Si chiama mamma&nbsp;—&nbsp;disse lei, semplicemente, un po’ meravigliata.</span></p>
+      <p class="pnext"><span>—&nbsp;Entra con me in classe; ti farò perdonare dalla maestra il ritardo.</span></p>
+      <p class="pnext"><span>Appena entrai vi fu un movimento precipitoso: tutte quelle piccine&nbsp;—&nbsp;sessanta forse&nbsp;—&nbsp;si alzarono, strillando su tutti i toni:</span></p>
+      <p class="pnext"><span>—&nbsp;Buon giorno, maestra! Buon giorno, maestra!</span></p>
+      <p class="pnext"><span>Credo di essere diventata rossa dall’orgoglio; mi tremava la voce, dicendo alla maestra titolare:</span></p>
+      <p class="pnext"><span>—&nbsp;Buon giorno, signorina. Fate sedere le piccole: vi prego, lasciate che questa qui rientri in classe.</span></p>
+      <p class="pnext"><span>La maestra fece una smorfietta:</span></p>
+      <p class="pnext"><span>—&nbsp;Questa qui è Aloe. Vi divertirete bene&nbsp;—&nbsp;disse.</span></p>
+      <p class="pnext"><span>E volte le spalle, se ne andò a far colazione.</span> <span class="invisible pageno target" id="page-090" title="090"></span><span>Aloe le cavò la lingua, tanto per cominciare. Era una bambina di dieci anni, molto brutta, molto magra, coi pomelli sporgenti, una bocca larga e avvizzita di donna, due occhi grigi e vivi, maliziosi, una criniera nera di ricciolini ruvidi, troppo folti, che pareva le lasciassero il volto esangue. Portava un vestitino di lanetta stinto, le calze di cotone azzurro tutte rattoppate col filo bianco e aveva le scarpe rotte.</span></p>
+      <p class="pnext"><span>—&nbsp;Andate al posto&nbsp;—&nbsp;le dissi&nbsp;—&nbsp;e state quieta.</span></p>
+      <p class="pnext"><span>Ella andò lentamente al banco e stette cinque minuti tranquilla. Ma mentre si diceva l’</span><em class="italics">Avemaria</em><span>, diede un pizzicotto nel braccio a Cavalieri, che si mise a piangere. Cavalieri era una grassottella, bianca e pienotta, coi capelli castagni, la boccuccia rotonda e schiusa; le fossette nelle guance, al mento, nelle manine; una piega nel grasso del collo, una piega nel grasso dei polsi. Era vestita di flanella rossa, calda calda, con un grembiule bianco ricamato,</span> <span class="invisible pageno target" id="page-091" title="091"></span><span>con le calzette di lana rossa: aveva un panierino elegante per la colazione. Passava il tempo a guardarsi le braccia, a guardarsi le mani, a guardarsi i piedi, a guardarsi le pieghe del grembiule, sorridente e rotondetta, gonfiando il bocchino, non capendo nulla, attirando i baci per quell’aspetto di pallottolina bianca, rossa e pulituccia.</span></p>
+      <p class="pnext"><span>—&nbsp;Aloe, perchè avete dato il pizzicotto a Cavalieri?</span></p>
+      <p class="pnext"><span>—&nbsp;Signora maestra, perchè è troppo grassa&nbsp;—&nbsp;mi rispose, levandomi in volto i suoi occhi di donnina malata e cattiva.</span></p>
+      <p class="pnext"><span>—&nbsp;Cercatele scusa, subito.</span></p>
+      <p class="pnext"><span>—&nbsp;No&nbsp;—&nbsp;rispose, duramente, battendo un piede sul tavolato.</span></p>
+      <p class="pnext"><span>—&nbsp;Andiamo, Aloe, siate buona: le avete fatto male a Cavalieri, Cavalieri piange, chiedetele scusa.</span></p>
+      <p class="pnext"><span>Allora, senza guardare nè me, nè la piccola vicina, mormorò a bassa voce:</span></p>
+      <p class="pnext"><span>—&nbsp;Chiedo scusa.</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-092" title="092"></span><span>Cavalieri, rabbonita, lo buttò al collo le braccia grassocce e la baciò sulla guancia. E Aloe si diede a piangere, tremando tutta, singhiozzando, inconsolabile.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>Per quanto cercassi d’essere imperiosa, non ci riescivo. Quelle creature non ci credevano alla mia durezza, alle mie occhiate burbere, alla voce secca e breve, alle minacce di castighi. Mi sogguardavano, sorridendo; oppure mi chiedevano perdono con certi sguardi supplici&nbsp;—&nbsp;io mi voltava verso la lavagna, per non perdere la gravità. Non era possibile di farle stare tranquille: ogni momento nasceva un nuovo incidente. In quanto a Parascandolo, una bimba sottile, con certi occhi lionati e un nasino dalle nari dilatate, ella mangiava sempre. Prima aveva mangiato il pane della sua colazione, poi aveva cavato di sotto al banco una</span> <span class="invisible pageno target" id="page-093" title="093"></span><span>arancia e l’aveva mangiata; poi si era messa a rosicchiare certe nocciuole che aveva in tasca.</span></p>
+      <p class="pnext"><span>—&nbsp;Parascandolo, voi mangiate ancora?</span></p>
+      <p class="pnext"><span>—&nbsp;Maestra, è un confetto che aveva nel panierino.</span></p>
+      <p class="pnext"><span>Più tardi:</span></p>
+      <p class="pnext"><span>—&nbsp;Parascandolo, finitela di mangiare.</span></p>
+      <p class="pnext"><span>—&nbsp;Maestra, è una noce, me l’ha data Amarante.</span></p>
+      <p class="pnext"><span>E dopo:</span></p>
+      <p class="pnext"><span>—&nbsp;Parascandolo, dite la lezione.</span></p>
+      <p class="pnext"><span>Ella inghiottiva di traverso, diventava rossa, le venivano le lagrime agli occhi, non si raccapezzava, si tastava le tasche del grembiule, a sentire se vi erano certe sementi infornate che aveva comperate. Invece Edwige Santelia sapeva tutte le lezioni, addizionava a tre cifre, faceva le aste bene inclinate, teneva la penna leggermente, senza sporcarsi le dita d’inchiostro. Stava zitta zitta, senza voltarsi alle piccole compagne, guardandomi fissamente in volto con certi occhi timidi, come se volesse interpretare</span> <span class="invisible pageno target" id="page-094" title="094"></span><span>la mia volontà. Feci una quantità di tentativi per confonderla, per coglierla in fallo, leggermente irritata di quella bonomia monotona. Mi rispondeva sempre bene, con una lentezza e una umiltà, senza turbarsi mai. Così fu che mi vinse: e in un momento in cui Aloe aveva cavata fuori la spugna del calamaio, impiastricciandosi orribilmente d’inchiostro, le gridai:</span></p>
+      <p class="pnext"><span>—&nbsp;Aloe, ma non potete star ferma un minuto? Vedete Santelia!</span></p>
+      <p class="pnext"><span>—&nbsp;Ah! quella è Santelia&nbsp;—&nbsp;mi rispose, con un accento profondo.</span></p>
+      <p class="pnext"><span>Lei Aloe non sapeva nulla, non aveva il sillabario, non aveva la penna, non aveva l’abbaco, non aveva il quaderno per le aste. Stava ritta innanzi al cartellone delle sillabe, guardandolo con le mani penzoloni, senza aprire bocca. Una viva espressione di sofferenza le si traduceva sulla faccia smorta.</span></p>
+      <p class="pnext"><span>—&nbsp;Leggete dunque.</span></p>
+      <p class="pnext"><span>—&nbsp;Non so&nbsp;—&nbsp;mormorava&nbsp;—&nbsp;non so.</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-095" title="095"></span><span>—&nbsp;Andate a sedere all’ultimo banco e fatevi prestare il sillabario da Tecchia: essa leggerà in quello di Buongarzone.</span></p>
+      <p class="pnext"><span>Perchè Tecchia e Buongarzone, una brunettina pallida e una biondina dagli occhi azzurri, stavano sempre accanto, leggevano nello stesso libro, intingevano la penna nello stesso calamaio, avevano una sola cartella. Capitavano alla scuola, tenendosi per mano, serie serie. Quando Tecchia non sapeva la lezione, neppure Buongarzone la sapeva: quando Buongarzone andava in castigo, Tecchia piangeva sommessamente, sino a che non si mandasse in castigo anche lei. Alla ricreazione passeggiavano a braccetto, senza parlarsi. Facevano colazione insieme, senza far rumore, in un angolo di banco, rosicchiando come due sorcetti. Quando Tecchia andava al pallottoliere, Buongarzone restava fremente al banco, cercando di suggerire, di aiutare l’amica:</span></p>
+      <p class="pnext"><span>—&nbsp;Tecchia&nbsp;—&nbsp;settantatre e otto?</span></p>
+      <p class="pnext"><span>E Buongarzone soffiava, chinando gli occhi, per non farsi scorgere:</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-096" title="096"></span><span>—&nbsp;Ottantuno.... ottantuno.</span></p>
+      <p class="pnext"><span>Si capivano fra loro, senza dirsi nulla. Ogni tanto scoppiavano a ridere, di accordo, non si sa perchè, pigliandosi per mano. Poi, si scambiavano le loro riflessioni:</span></p>
+      <p class="pnext"><span>—&nbsp;L’abbaco è scucito.</span></p>
+      <p class="pnext"><span>—&nbsp;Ci vuole il filo bianco.</span></p>
+      <p class="pnext"><span>—&nbsp;Bisogna domandarlo alla bidella.</span></p>
+      <p class="pnext"><span>—&nbsp;Non ci sta.</span></p>
+      <p class="pnext"><span>E si guardavano, l’una nell’ammirazione dell’altra, come se le altre bimbe non esistessero, aspettando l’ora dell’uscita, per andarsene pian piano, tenendosi per mano, dicendo di queste cose:</span></p>
+      <p class="pnext"><span>—&nbsp;Oggi ci</span> <em class="italics">stanno</em> <span>i maccheroni.</span></p>
+      <p class="pnext"><span>—&nbsp;Mammella ha fatto la cicoria.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>Ma l’ora lunga e difficile fu quella dei lavori donneschi. Poche sapevano fare la calza, qualcuna sapeva far l’orlo: e di queste, poche avevano</span> <span class="invisible pageno target" id="page-097" title="097"></span><span>il filo e i ferri e l’ago e il ditale e qualche cosa da orlare. Santelia cuciva già una camicia. Cavalieri si bucò un ditino, ne sprizzò il sangue, lo succhiò e non volle più cucire. Tecchia e Buongarzone avevano la calza e lavoravano, urtandosi coi gomiti, dure dure, come se contassero le maglie. Le altre che non cucivano e non facevano la calza, non potevano star ferme, non potevano tacere. Dovetti andare molto in collera per ottenere un po’ di silenzio. Dopo cinque minuti, una vocina timida mi chiese:</span></p>
+      <p class="pnext"><span>—&nbsp;Maestra, fateci un favore.</span></p>
+      <p class="pnext"><span>—&nbsp;Che favore?</span></p>
+      <p class="pnext"><span>—&nbsp;Dite prima, che ce lo fate.</span></p>
+      <p class="pnext"><span>—&nbsp;Se non so che cosa è....</span></p>
+      <p class="pnext"><span>—&nbsp;Maestra, ce lo potete fare.</span></p>
+      <p class="pnext"><span>—&nbsp;Dite dunque.</span></p>
+      <p class="pnext"><span>—&nbsp;Maestra, vogliamo sapere come vi chiamate.</span></p>
+      <p class="pnext"><span>Dissi in fretta il mio nome e subito un coro di esclamazioni:</span></p>
+      <p class="pnext"><span>—&nbsp;Oh che bel nome che avete, maestra! Beata voi che avete questo nome.</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-098" title="098"></span><span>Ma in questa ora, quella scarna di Aloe, dagli occhi febbrili, fece quante impertinenze possono frullare in una testolina stravagante: stracciò un quaderno, tolse una scarpa a Parascandolo, si ficcò uno spillo tra due denti che non si poteva più cavare, sventrò il cuscinetto di un banco, ruppe un vetro e si ferì una mano. Niente ci poteva: si rideva delle sgridate, si rideva del castigo, andava in un angolo, ballava la tarantella e faceva le castagnette con le dita, si buttava per terra, faceva le capriole. Frenarla non era possibile. In certi momenti mi veniva da schiaffeggiarla: in certi altri mi salivano le lagrime agi occhi. Ella era indomabile.</span></p>
+      <p class="pnext"><span>—&nbsp;Aloe, se non state un po’ tranquilla, chiamo la direttrice e me ne vado su&nbsp;—&nbsp;le dissi placidamente.</span></p>
+      <p class="pnext"><span>Ella mi guardò, di sottecchi.</span></p>
+      <p class="pnext"><span>—&nbsp;Se vi fate dare un bacio, mi sto quieta&nbsp;—&nbsp;mi disse.</span></p>
+      <p class="pnext"><span>—&nbsp;Che! siete troppo impertinente.</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-099" title="099"></span><span>—&nbsp;Voglio darvi un bacio&nbsp;—&nbsp;ripetè, ostinata.</span></p>
+      <p class="pnext"><span>Infine dovetti farmi baciare. Allora lei si sedette, stette immobile, con le mani in croce, presa da una tristezza grande. Quando me ne andai, quelle piccine mi circondarono, strillando:</span></p>
+      <p class="pnext"><span>—&nbsp;Maestra, tornate presto! Maestra, non lo dite</span> <em class="italics">sopra</em> <span>che siamo cattive!</span></p>
+      <p class="pnext"><span>Aloe se ne andò senza parlarmi.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>Nelle vacanze, vicino alla bottega di uno stagnino, vidi Santelia seduta, che cuciva. Mi riconobbe e si alzò, guardandomi con lo stesso sguardo timido:</span></p>
+      <p class="pnext"><span>—&nbsp;È papà vostro, lo stagnino?</span></p>
+      <p class="pnext"><span>—&nbsp;Sì, signora maestra.</span></p>
+      <p class="pnext"><span>—&nbsp;Voi siete passata all’altra classe?</span></p>
+      <p class="pnext"><span>—&nbsp;Sì, signora maestra: ho avuto la medaglia.</span></p>
+      <p class="pnext"><span>—&nbsp;E le altre?</span></p>
+      <p class="pnext"><span>—&nbsp;Ce ne sono restate venti, signora maestra.</span></p>
+      <p class="pnext"><span>—&nbsp;Anche Aloe, nevvero?</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-100" title="100"></span><span>—&nbsp;No, signora maestra: Aloe è morta.</span></p>
+      <p class="pnext"><span>—&nbsp;Quando è morta?</span></p>
+      <p class="pnext"><span>—&nbsp;Nel mese di agosto.</span></p>
+      <p class="pnext"><span>—&nbsp;E di che male?</span></p>
+      <p class="pnext"><span>—&nbsp;Aveva la febbre e aveva pure la tosse e le faceva male il petto. Poi, è morta.</span></p>
+      <p class="pnext"><span>—&nbsp;Voi l’avete vista?</span></p>
+      <p class="pnext"><span>—&nbsp;Sì, signora maestra: ci è andata la direttrice e io ci sono andata con Cavalieri. Ha detto alla direttrice:</span> <em class="italics">dite a tutte le maestre che cerco perdono delle impertinenze</em><span>. E le scarpe nuove che la mamma le aveva fatte, che non poteva più mettere, perchè se ne moriva, le ha mandate a regalare a Casanova, quella poveretta che veniva a scuola con gli zoccoli.</span></p>
+      <blockquote>
+        <div>
+          <div class="align-center auto-scaled block figure" style="width: 14%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/fineparag.png" /></div>
+        </div>
+      </blockquote>
+      <div class="align-center auto-scaled block figure" style="width: 73%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/corn.png" /></div>
+    </div>
+    <div class="level-2 section" id="nebulose">
+      <h2 class="center level-2 pfirst section-title title"><a class="toc-backref" href="#id12"><span class="invisible pageno target" id="page-101" title="101"></span><span>NEBULOSE</span></a></h2>
+      <p class="pfirst"><span class="invisible pageno target" id="page-102" title="102"></span> <span class="invisible pageno target" id="page-103" title="103"></span></p>
+      <p class="pnext"><span>Sulla via che si allunga, diritta, quasi interminabile, sotto i pioppi, camminavano lentamente i due amanti che non si amavano. Lasciavano alle spalle un tramonto di viola: andavano verso un tramonto di un grigio tenue delicatissimo. Ella si trascinava stanca e svogliata, facendo strisciare nella polvere la punta del suo ombrellino, trattenuto mollemente dalle dita: lo sguardo aveva la sola espressione di una grande lassezza. Egli si era calcato il cappello sugli occhi, portava il bastoncino sotto l’ascella e fumava attentamente una sigaretta. Non si parlavano</span> <span class="invisible pageno target" id="page-104" title="104"></span><span>nè si guardavano: andavano freddi e noncuranti, immersi ciascuno nell’egoismo delle proprie riflessioni. Erano due cuori inariditi, secchi, morti, che avevano assaggiata l’amarezza di un’ultima delusione, credendo di amarsi. Attori consumati nel mestiere della rappresentazione, avevano insieme recitata la commedia ignobile della passione, esaltandosi sino al punto da crederla vera: ma l’impotenza delle loro anime li aveva prima condotti all’ingiuria feroce, poi all’indifferenza. Perchè odiarsi? Erano due miserabili esistenze, due tronchi colpiti dal fulmine. Ogni tanto, in lei, un senso di nausea, un sussulto nervoso per quest’ultimo convegno, in quella mitezza autunnale, nella campagna malinconica, dinnanzi al triste mare. Un carro carico di botti passò fra loro e li divise: ella fece un moto di disgusto, per quel puzzo di vino, egli si strinse nelle spalle. D’un tratto, lungo la siepe che separa i campi dalla via, in quella luce dubbia del crepuscolo, una piccola ombra scivolò. Era un bambina scalza</span> <span class="invisible pageno target" id="page-105" title="105"></span><span>e cenciosa, che portava sul capo un piccolo fascio di legna.</span></p>
+      <p class="pnext"><span>—&nbsp;Oh, la piccina!&nbsp;—&nbsp;esclamò la donna.</span></p>
+      <p class="pnext"><span>I due amanti si posero a seguire la bimba, che camminava senza far rumore, presto presto.</span></p>
+      <p class="pnext"><span>—&nbsp;Chiamala&nbsp;—&nbsp;disse la donna.</span></p>
+      <p class="pnext"><span>L’uomo chiamò la bambina con due o tre nomi carezzevoli, ma quella parve non avesse inteso. Allora i due amanti affrettarono il passo, la raggiunsero: la bambina camminò accanto a loro, senza guardarli. Finalmente la donna si piantò innanzi alla bambina, impedendole il passo.</span></p>
+      <p class="pnext"><span>—&nbsp;Come ti chiami?</span></p>
+      <p class="pnext"><span>Nulla: alzò un paio di occhi selvaggi, li riabbassò e fece per andarsene.</span></p>
+      <p class="pnext"><span>—&nbsp;Lo vuoi, un soldo?&nbsp;—&nbsp;domandò l’uomo.</span></p>
+      <p class="pnext"><span>E gli mise un soldo nella manina. Il soldo cadde dalle dita aperte, a terra: e la bambina scomparve nella notte.</span></p>
+      <p class="pnext"><span>—&nbsp;Oh povera!&nbsp;—&nbsp;mormorò la donna.</span></p>
+      <p class="pnext"><span>—&nbsp;Poveretta&nbsp;—&nbsp;mormorò l’uomo.</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-106" title="106"></span><span>E si lasciarono, per sempre, senz’ira, in un comune sentimento di pietà.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>Il bimbo stava fermo innanzi alla vetrina di Natali, guardando le bambole vestite da ciociarine, i fantocci vestiti da arlecchino e le scatole dove annidavano le casettine dipinte e gli alberetti di trucioli verdi. Diceva alla serva:</span></p>
+      <p class="pnext"><span>—&nbsp;Se avessi quattrini, comprerei quel</span> <em class="italics">fratello Girard</em> <span>che fa le capriole con le mani e coi piedi: forse costa cinque lire e mamma non vuole mai spendere più di venticinque soldi. Comprerei anche quel sorcetto che si dà la corda e corre per la casa: la palla elastica non la voglio, perchè è brutta, perchè ne ho avute tante....</span></p>
+      <p class="pnext"><span>Allora, accanto a questo bimbo snello e pallido, di una bellezza pensierosa e sentimentale, si fermò una bambina. Era una ragazzina di sarta: portava uno scatolone ovale, coperto di</span> <span class="invisible pageno target" id="page-107" title="107"></span><span>pelle nera, con una larga correggia passata al braccio. Lo scatolone poggiava sul fianco e la faceva piegare tutta da una parte. Vestiva di nero, un nero stinto, dove diventato rossastro, dove verdastro: portava un cappellino di paglia nero, vecchio, circondato da un brutto nastro. Ella stessa era bruttissima, capelli rossi, viso macchiato di lentiggini, occhi senza ciglia, naso rincagnato. Essa, invece di guardare i giocattoli,</span></p>
+      <p class="pnext"><span>guardava il bambino, ascoltando i suoi discorsi. D’un tratto il bambino si accorse di lei e le disse:</span></p>
+      <p class="pnext"><span>—&nbsp;Quanto sei brutta!</span></p>
+      <p class="pnext"><span>Quella trasalì, ma non rispose, e restò lì, incantata, a contemplare quel bel bambino, dal labbro orgoglioso.</span></p>
+      <p class="pnext"><span>—&nbsp;Sei brutta, vattene!&nbsp;—&nbsp;disse il bimbo, facendole dei versacci.</span></p>
+      <p class="pnext"><span>Ella se ne andò pian piano, sbilenca sotto il peso dello scatolone, e si perdette nella folla di quella serata estiva. Anche il bimbo si avviò, dando la mano alla serva che lo rimproverava</span> <span class="invisible pageno target" id="page-108" title="108"></span><span>delle cattive parole, dette a una povera creatura. Egli s’indispettiva e rispondeva soltanto:</span></p>
+      <p class="pnext"><span>—&nbsp;È brutta, è brutta, è brutta.</span></p>
+      <p class="pnext"><span>Si ritrovarono di nuovo, sul marciapiede. Sembrava che la bambina avesse aspettato: e seguiva passo passo il bambino, fingendo di guardare in aria o nelle botteghe, quando egli si voltava. Ogni tanto con uno sforzo e con un sospiro si rialzava lo scatolone sul fianco e correva dietro al bambino, senza mai perderlo d’occhio. Fino a che egli si accorse di questa persecuzione e battè i piedi in terra, per la rabbia: si piantò sul marciapiede e quando la ragazzina fu obbligata a passargli innanzi, le dette un pugno in un fianco. Ella se ne fuggì, con le lagrime negli occhi, sorridente e beata.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>Batte il sole di settembre sulla piazza di San Marco: è il pomeriggio silenzioso e chiaro. La piazza è deserta. Sotto le Procuratie passeggia</span> <span class="invisible pageno target" id="page-109" title="109"></span><span>qualche ozioso, con le lenti azzurre: intorno ai tavolinucci del caffè Florian, due o tre veneziani sonnolenti guardano nel fondo delle loro tazze, con gli occhi socchiusi. L’ombra del campanile si allunga, bizzarra, sulla piazza. I colombi dormono sul cornicione del palazzo reale, sulle braccia delle statue; ogni tanto se ne stacca uno, fa un volo rotondo, per aria, senza toccare terra, e ritorna al suo posto. A un tratto si ode un largo fruscìo, un batter d’ali sordo e precipitoso, e tutto lo stormo dei colombi vien giù. In mezzo ad essi una bimba, con una gonnelluccia corta e uno scialletto che le avvolge il busto, cava dalla tasca manate di granturco e ne lascia filtrare i grani fra le dita. I colombi formano intorno a lei un circolo fitto, fitto, pizzicandosi, beccandosi, per arrivare al granturco: lei sta nel centro, piccola, con una testolina minuta, con una grossa treccia fulva, mezzo discinta sul collo. Mentre cadono i grani ella guarda i colombi, fissamente, con certi occhi verdini, glauchi. Quando non trova</span> <span class="invisible pageno target" id="page-110" title="110"></span><span>più nulla nella tasca, un’espressione di malinconia le si diffonde sulla faccia. I colombi restano ancora un poco, cercando gli ultimi granelli, pigolando, beccandole le scarpette: poi, a gruppetti di tre, di quattro volano via, se ne vanno sul campanile. Pochi ostinati restano, cercando ancora: e questi qui se ne vanno ad uno ad uno. Ella li vede partire tutti sino all’ultimo, seguendoli con l’occhio, nel volo largo.</span></p>
+      <blockquote>
+        <div>
+          <div class="align-center auto-scaled block figure" style="width: 14%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/fineparag.png" /></div>
+        </div>
+      </blockquote>
+      <div class="align-center auto-scaled block figure" style="width: 73%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/corn.png" /></div>
+    </div>
+    <div class="level-2 section" id="moda">
+      <h2 class="center level-2 pfirst section-title title"><a class="toc-backref" href="#id13"><span class="invisible pageno target" id="page-111" title="111"></span><span>MODA</span></a></h2>
+      <p class="pfirst"><span class="invisible pageno target" id="page-112" title="112"></span> <span class="invisible pageno target" id="page-113" title="113"></span></p>
+      <p class="pnext"><span>È utile qui dire, che nessun bimbo può essere assolutamente brutto; che nessun bimbo ispira una completa ripugnanza. Se sono malaticci, hanno la dolcezza di una malattia; se sono rachitici, hanno la malinconia attraente di un corpo condannato; se sono precoci, hanno quel sapore strano e acre delle piccole anime, già troppo grandi. Infine potranno avere il naso camuso o gli occhi piccoli o la bocca grande&nbsp;—&nbsp;ma avranno sempre qualche cosa bella: o la guancia rotonda o la delicatezza della pelle o la morbidezza dei capelli, o avranno, nello</span> <span class="invisible pageno target" id="page-114" title="114"></span><span>insieme, tanta grazia soave, tanta freschezza, tanta gioventù che vale come bellezza. Vi sono uomini brutti e vi sono uomini ripugnanti: ma Dio volle che non vi fosse infanzia senza sorriso e senza fascino di amore.</span></p>
+      <p class="pnext"><span>Così, io credo la più facile, la più deliziosa cosa per una madre, vestire il proprio bimbo. Vi deve essere una gioia minuta, ma molto acuta, nel preparare le leggiadre ed eleganti cose che renderanno più bella la propria creatura; credo che debba essere una delle contentezze più intense della maternità, questa cura assidua e immaginosa, di adornare graziosamente questo essere piccoletto e bello.</span></p>
+      <p class="pnext"><span>Quando, per la via, s’incontra una mammina col bimbo, se ella è più elegante del suo bimbo, bisogna diffidare un poco di quella madre. Quando il bimbo è addirittura goffo, trascurato, non riparato contro il freddo, allora il senso della maternità è molto debole in quella madre. Quando il bimbo ha un abituccio gramo, simile a quello ricco della madre, vale a dire</span> <span class="invisible pageno target" id="page-115" title="115"></span><em class="italics">combinato</em> <span>coi ritagli—allora questa madre ha il cuore deplorabilmente inaridito dalla vanità e guastato da una feroce avarizia. Invece ho conosciuto una madre, ancora giovane, ancora bella, che vestiva sempre la lana, mandando fuori la sua creatura vestita di seta; che non aveva più vanità per sè; che rientrava da ogni passeggiata, riportando un nastro, un cappellino, una mantellina per la sua creatura, che passava le ore a fantasticare qualche cosa di nuovo e di bello, sempre per la sua creatura; che si tormentava, se ne vedeva un’altra meglio vestita; che quando le dicevano:</span> <em class="italics">come è graziosa oggi la vostra creatura!</em> <span>impallidiva di gioia, sorrideva e soggiungeva subito:</span></p>
+      <p class="pnext"><span>—&nbsp;Ora, ora, le sto facendo un altro vestitino, più bello ancora, con cui vedrete come sarà carina.</span></p>
+      <p class="pnext"><span>E non dite che questa sia vanità riflessa. O ditelo che sia e rallegratevene. Perchè molti vestitini fatti in casa, molti sottanini di maglia, molte camiciuole ricamate, molti colletti smerlati,</span> <span class="invisible pageno target" id="page-116" title="116"></span><span>sono il pericolo evitato, sono il peccato sfuggito, sono il dramma scongiurato.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>La moda è sempre semplice per i bimbi e per le bimbe. Quei corpi piccini sono così puri di linee o così graziosamente grassotti, che non hanno bisogno di tutte le balze, di tutte le pieghe, di tutte le arricciature di cui abbiamo bisogno&nbsp;—&nbsp;o fingiamo di avere&nbsp;—&nbsp;noi altre donne. Una bimba di sette anni, che porta la gonna sgheronata, i</span> <em class="italics">pouffs</em> <span>sui fianchi e il grosso ciuffo dietro, è sicuramente una stonatura. Intanto se ne vedono spesso, di queste bambole troppo bene vestite: è il modo di renderle ridicole e molto infelici. Se per noi altre persone grandi è una serie di problemi difficoltosi, entrare nelle vesti, poi affibbiarle, poi respirarci, poi camminarci, poi sedersi, poi salire in carrozza&nbsp;—&nbsp;caso gravissimo, quasi sempre con risultato di stringhe rotte e di nastri scuciti</span> <span class="invisible pageno target" id="page-117" title="117"></span><span>—&nbsp;figuratevi quanto possa essere misera una bambina, dentro una di queste armature medievali, che scricchiolano a ogni movimento. La tunica liscia, lievemente assettata, abbottonata sul dorso, che cade sopra un gonnellino rotondo, a pieghe larghe e profonde, è sempre l’abito più bello per le fanciullette. Così mentre rimangono libere nei loro movimenti, quella linea semplice, allungata, le veste benissimo.</span></p>
+      <p class="pnext"><span>Per i bimbi nulla di meglio di questa tunica che cade sui calzoncini assettati e abbottonati al ginocchio: è per loro un orgoglio, la cintura di cuoio giallo, con la fibbia di acciaio, messa molto giù. Vi sono certe maglie di lana nera o azzurro molto cupo, come una tonacella, sul gonnellino di lana bianca, che sono una cosa incantevole a vedersi. E per confessioni infantili che io raccolgo, comodissime, perchè si prestano a qualunque corsa e a qualunque capriola.</span></p>
+      <p class="pnext"><span>Anche per confessioni, i bimbi maschi preferiscono i calzoncini corti, al ginocchio, a quelli</span> <span class="invisible pageno target" id="page-118" title="118"></span><span>lunghi: quelli lunghi impacciano, seccano, si sporcano facilmente. Poi nascondono le calze che sono una vanità infantile, poi nascondono a metà gli stivalini, che sono la più forte vanità infantile. Certo il bimbo tiene assai ai calzoncini, umiliato sempre profondamente dalle gonnelle femminili: ma vuole le calze colorate, stirate sulla gamba, e gli stivalini alti, coi lacci o coi bottoni. Tanto più che questo insieme dà loro una grande sveltezza e li fa apparire più alti. Un vestitino di velluto marrone, con bottoni dorati&nbsp;—&nbsp;o di raso nero coi bottoni di madreperla, a pallottoline, le calze dello stesso colore dell’abito, gli stivalini neri: ecco una figurina seducente.</span></p>
+      <p class="pnext"><span>Le bimbe possono essere vestite di bianco più facilmente e con minori pericoli, perchè sono più pulite. Se ne incontrano per il Corso, tutte in bianco, con le mantelline in felpa bianca, e un berretto di pelliccia bianco: sembrano gattine freddolose, rosee, cogli occhioni bigi. Maschietti e femminucce non possono soffrire quei</span> <span class="invisible pageno target" id="page-119" title="119"></span><span>colletti di tela insaldati, duri come il cartone, che fanno una riga rossa sulla pelle del collo. È una moda inglese: ma serve per quei bimbi inglesi, serii, riflessivi e stecchiti che sono già</span> <em class="italics">gentlemen</em> <span>a sette anni. Il colletto deve essere morbido, largo&nbsp;—&nbsp;o deve essere una folta arricciatura di trina, che lasci ogni libertà di azione al collo. Così la cravatta non deve avere un nodo corretto che abbisogni di spilli per reggere, ma deve essere a nodo facile e artistico, a cappi svolazzanti: del resto, un bimbo, col nodo della cravatta che gli è arrivato sulla spalla o sulla nuca, è anche grazioso&nbsp;—&nbsp;come è grazioso vedere le agili ed inquiete dita della madre che glielo rimette al posto, ogni cinque minuti.</span></p>
+      <p class="pnext"><span>Per i bimbi da dieci a dodici anni, una consolazione sono le ghette, specie quelle caffè e latte, con una fila di bottoncini: se le sognano la notte, come mi narrava il mio amico Ninì, in tutta confidenza. Mentre per le bimbe di dieci anni, i guanti sono un desiderio segreto,</span> <span class="invisible pageno target" id="page-120" title="120"></span><span>ma non quelli di pelle, difficili a mettersi, e di cui saltano via così presto i bottoni: sibbene quelli di filo o di seta, che s’infilano presto e sono senza bottoni. In questo modo, quello che essi preferiscono, è quello che va loro meglio. Essi non si curano dei gioielli, ed è certamente un’abitudine barocca quella di metter loro al collo catenine d’oro con medaglioni, di dar loro degli anellini, degli orecchini di brillanti. Quella carne fresca e tenera non ha bisogno di questi ornamenti. Essi non amano i profumi, e basta unicamente che quella pelle sottile sia cosparsa di polvere di riso, senza odore: basta che la biancheria odori di ireos o di lavanda. Tutti gli</span> <em class="italics">Champacca</em><span>, gli</span> <em class="italics">Ylang&nbsp;—&nbsp;Ylang</em><span>, i</span> <em class="italics">White&nbsp;—&nbsp;rose</em> <span>che eccitano e deprimono i nervi squisiti di noi altri grandi ammalati, non arriveranno a superare quella bontà di odore giovane, che ha la faccia e il collo dei bimbi.</span></p>
+      <p class="pnext"><span>Quello che essi più odiano è il parrucchiere, che taglia loro i capelli sino alla cute, col pretesto</span> <span class="invisible pageno target" id="page-121" title="121"></span><span>che debbano crescere loro più forti; e infatti, un bimbo con la testa pelata, è brutto quanto infelice. Quello che essi odiano, è la pomata, che impiastriccia e insudicia i capelli. Bisogna che la madre o la sorella grande o la zia zitellona abbiano il senso artistico di quelle onde brune che cadono sulle spalle, di quelle ciocche pioventi sulla fronte, di quelle forti trecce battenti sugli omeri, di quei riccioli che sfuggono a un berretto messo alla sgherra. Un bimbo che esce pettinato dalla sua casa, può essere bello; ma quando ritorna dal Pincio, la sua spettinatura è bellissima. Come semplice riflessione, ho da aggiungere che è odioso tagliare la frangetta sulla fronte delle bambine e far arricciare dal parrucchiere i capelli dei bimbi.</span></p>
+      <p class="pnext"><span>In quanto ai cappelli dei bimbi, possono essere grandissimi o piccolissimi, messi di traverso, buttati indietro, purchè non vi siano sopra nè piume, nè fiori, nè veli&nbsp;—&nbsp;basta un semplice nastro, un fiocco di seta. Purchè siano di feltro, molle, o di panno o di paglia flessibile</span> <span class="invisible pageno target" id="page-122" title="122"></span><span>in modo da resistere ai colpi; purchè abbiano l’elastico che si passa sotto il mento; purchè non imitino le forme pretensiose dei cappelli materni o paterni: saranno sempre belli.</span></p>
+      <p class="pnext"><span>Per le bambine delicate e infermicce si fa una eccezione, dando loro quelle cappottine chiuse che riparano dal freddo e mettono il visino gracile come in una bomboniera. In quanto ai piccoli marinari, alle piccole scozzesi, ai piccoli bersaglieri, è inutile dire che è una prova la più completa di goffaggine che possa andare per le vie. Per un minuto i bimbi se ne contentano, dopo sono impacciati, annoiati, nervosi: è un grande torto sovraccaricarli, essi che sono la semplicità&nbsp;—&nbsp;dare una tesi ai loro abiti, mentre chi li porta è la chiarezza&nbsp;—&nbsp;renderli pensierosi, essi che sono la gioia.</span></p>
+      <blockquote>
+        <div>
+          <div class="align-center auto-scaled block figure" style="width: 14%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/fineparag.png" /></div>
+        </div>
+      </blockquote>
+      <div class="align-center auto-scaled block figure" style="width: 73%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/corn.png" /></div>
+    </div>
+    <div class="level-2 section" id="perdizione">
+      <h2 class="center level-2 pfirst section-title title"><a class="toc-backref" href="#id14"><span class="invisible pageno target" id="page-123" title="123"></span><span>PERDIZIONE</span></a></h2>
+      <p class="pfirst"><span class="invisible pageno target" id="page-124" title="124"></span> <span class="invisible pageno target" id="page-125" title="125"></span></p>
+      <p class="pnext"><span>Mentre la bionda mammina placidamente ricamava un orlo di camiciuola e Mario, seduto sul tappeto, intagliava certi soldatini dipinti di rosso e di azzurro sulla carta, entrò improvvisamente il giovane padre, tutto allegro:</span></p>
+      <p class="pnext"><span>—&nbsp;Su, Mario, su fantoccetto mio, fatti vestire da mammina ed usciamo: ti conduco a spasso.</span></p>
+      <p class="pnext"><span>La mammina aveva lievemente aggrottate le sopracciglia e non si era mossa: Mario era balzato in piedi, abbracciando le gambe di papà, strofinandosi contro i calzoni:</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-126" title="126"></span><span>—&nbsp;O papuccio mio bello, o piccolo papà caro&nbsp;—&nbsp;ripeteva, ridendo, avvinghiandosi come un serpentello.</span></p>
+      <p class="pnext"><span>—&nbsp;Andiamo, Tecla, vesti Mario: si fa tardi.</span></p>
+      <p class="pnext"><span>—&nbsp;Veramente vuoi condurlo a spasso?&nbsp;—&nbsp;chiese ella, sorpresa, senza alzarsi.</span></p>
+      <p class="pnext"><span>—&nbsp;Figùrati, ho due ore di libertà, un vero miracolo! Questa creatura non esce mai con me.</span></p>
+      <p class="pnext"><span>—&nbsp;Se lo conduci al Pincio, avrà freddo.</span></p>
+      <p class="pnext"><span>—&nbsp;Non lo conduco al Pincio. È vero, burattinello mio, che non te ne importa niente del Pincio?</span></p>
+      <p class="pnext"><span>—&nbsp;Non me ne importa, papino, purché tu mi conduca e la mammina mi metta l’abito di raso.</span></p>
+      <p class="pnext"><span>—&nbsp;Ai Prati di Castello ci farà umido&nbsp;—&nbsp;osservò la madre.</span></p>
+      <p class="pnext"><span>—&nbsp;Non lo conduco ai Prati&nbsp;—&nbsp;non lo vuoi far uscire, il bimbo? Sei gelosa eh?</span></p>
+      <p class="pnext"><span>—&nbsp;Ma che!&nbsp;—&nbsp;fece lei, dando una spallata.</span></p>
+      <p class="pnext"><span>E alzandosi lentamente, con una grande svogliatezza</span> <span class="invisible pageno target" id="page-127" title="127"></span><span>andando e venendo senza fretta, aprendo tutti i cassetti e tutti gli armadi, senza trovare nulla, la mammina bionda vestì Mario. Il quale ritto, in camicia, sul letto, agitava le gambe aspettando le calze e gli stivalini, scherzando con suo padre, buttandosi giù sul letto, facendosi solleticare, ridendo sempre, baciucchiando il suo papà bello che si abbandonava, ridendo, sul letto, anche lui. Più d’una volta, mentre gli tirava su le calze, gli allacciava gli stivaletti e gli abbottonava il vestitino, la bionda mammina si era chinata sul collo di Mario, come se avesse voluto dire qualche cosa in segreto al bimbo. Ma il papà era sempre lì, fermo ad aspettare, sorridente. La mammina sbagliò tutta la fila di bottoni e dovette ricominciarla. Mario fremeva d’impazienza, dimenandosi: il papà aveva già il cappello in testa e mammina cercava ancora un fazzolettino da dare a Mario.</span></p>
+      <p class="pnext"><span>—&nbsp;Gli dò il mio, Tecla, se gli serve.</span></p>
+      <p class="pnext"><span>—&nbsp;Non mi serve, andiamo, papà piccino.</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-128" title="128"></span><span>—&nbsp;Non gli comprare giocattoli&nbsp;—&nbsp;disse sottovoce la mammina al papà.</span></p>
+      <p class="pnext"><span>—&nbsp;Non dubitare, non glieli compro.</span></p>
+      <p class="pnext"><span>E allora la mamma diede un lungo bacio sulla fronte del figlioletto, come se volesse far parlare alle labbra una lingua sconosciuta. Essa uscì sul pianerottolo e guardò il padre ed il figlio che scendevano le scale, saltellando e chiacchierando:</span></p>
+      <p class="pnext"><span>—&nbsp;Mario?&nbsp;—&nbsp;chiamò ella.</span></p>
+      <p class="pnext"><span>—&nbsp;Che c’è, mamma?</span></p>
+      <p class="pnext"><span>—&nbsp;Senti una cosa.</span></p>
+      <p class="pnext"><span>—&nbsp;Dilla di lassù, mammuccia.</span></p>
+      <p class="pnext"><span>—&nbsp;Se hai freddo, ti dò il cappottino.</span></p>
+      <p class="pnext"><span>—&nbsp;Non ho freddo. Addio, mamma.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>Sulla porta del baraccone, dove si entrava a vedere la vasca dei coccodrilli e il gabbione delle tigri, a Mario era venuta meno la curiosità ed il coraggio. Guardava il suo papà con</span> <span class="invisible pageno target" id="page-129" title="129"></span><span>una faccia fra la paura e il desiderio, ma stava fermo, in mezzo all’esedra di Termini, non osando entrare.</span></p>
+      <p class="pnext"><span>—&nbsp;Sono grossi i coccodrilli, papà?</span></p>
+      <p class="pnext"><span>—&nbsp;Sì, pauroso mio.</span></p>
+      <p class="pnext"><span>—&nbsp;Grossi come Nanna, la cuoca?</span></p>
+      <p class="pnext"><span>—&nbsp;Più lunghi e più schiacciati.</span></p>
+      <p class="pnext"><span>—&nbsp;Andiamo via, papà. Raccontami tu i coccodrilli e le trigi. Mi comprerai un giocattolo a via Nazionale, coi quattrini che dovevi spendere nella baracca.</span></p>
+      <p class="pnext"><span>—&nbsp;No, gioia mia, ne hai troppi di giocattoli.</span></p>
+      <p class="pnext"><span>—&nbsp;O papà, che dici! Alessandro, alla scuola, se sapessi quanti ne ha, di belli, di complicati, con le macchinette dentro, per far camminare! Ci ha la ferrovia, con tre vagoncini, e dentro vi sono i viaggiatori e sulla caldaia vi è un macchinista, tutto nero, poveretto! Poi ci ha un</span> <em class="italics">giuoco di cavallo</em><span>, coi saltatori, coi cavalerizzi che girano, girano. Capisci, si dà la corda, papà. Avevi tu giocattoli, quando eri piccolo piccolo, come me?</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-130" title="130"></span><span>—&nbsp;Pochi, Mario.</span></p>
+      <p class="pnext"><span>—&nbsp;E le impertinenze le facevi?</span></p>
+      <p class="pnext"><span>—&nbsp;Meno di te, biricchino.</span></p>
+      <p class="pnext"><span>—&nbsp;Gli scappellotti te li davano, papà?</span></p>
+      <p class="pnext"><span>—&nbsp;Sì, caro.</span></p>
+      <p class="pnext"><span>—&nbsp;E ti facevano male?</span></p>
+      <p class="pnext"><span>—&nbsp;Qualche volta, Mario.</span></p>
+      <p class="pnext"><span>—&nbsp;Vedi, papuccio, quando mamma mi dà uno schiaffetto, non mi fa mai male. Io piango forte e strillo, ma non è vero niente. Ora non me ne dà più mamma.</span></p>
+      <p class="pnext"><span>—&nbsp;Le vuoi bene a mamma?</span></p>
+      <p class="pnext"><span>—&nbsp;Si, papà piccolo: ma voglio più bene a te.</span></p>
+      <p class="pnext"><span>—&nbsp;Non lo devi dire, questo. Perchè vuoi più bene a me?</span></p>
+      <p class="pnext"><span>—&nbsp;Non ti vedo che a pranzo, papà mio! E la mamma, la vedo sempre. Se mi compri un giocattolo, dico che voglio bene lo stesso a tutti due.</span></p>
+      <p class="pnext"><span>—&nbsp;Brutto bugiardone! Non preferisci prendere una granita da Singer?</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-131" title="131"></span><span>—&nbsp;Sì, papà; la granita di amarena che è rossa.</span></p>
+      <p class="pnext"><span>Poi quando ebbe lentamente presa la sua granita per farla durare di più, Mario volle comprare le paste per portarle alla mammina che, poveretta, era rimasta in casa e non aveva avuto granita. Volle portare il pacchetto, infilando il dito nel nodo dello spago.</span></p>
+      <p class="pnext"><span>—&nbsp;Papà, quando sarò grande, potrò mangiare una granita ogni giorno?</span></p>
+      <p class="pnext"><span>—&nbsp;Ti faranno male allo stomaco.</span></p>
+      <p class="pnext"><span>—&nbsp;No, no, non mi faranno niente. Papà, io voglio essere corazziere.</span></p>
+      <p class="pnext"><span>—&nbsp;E se rimani piccolo? Tu sei ancora il mio pupazzetto!</span></p>
+      <p class="pnext"><span>—&nbsp;Oh dammi da mangiare, fammi diventare alto e grosso, papà. Se resto piccolo, non mi vogliono per corazziere, papà.</span></p>
+      <p class="pnext"><span>Ma la grande vetrina di Natali lo sedusse. Tacendo, con gli occhi intenti, con la bocca socchiusa, guardava quei giocattoli meravigliosi. La manina stringeva quella del padre, come se</span> <span class="invisible pageno target" id="page-132" title="132"></span><span>volesse comunicargli i tuoi fremiti. E il visino era così pallido di desiderio, gli occhi buoni supplicavano tanto, che il padre non seppe resistere ed entrò con Mario nella bottega per compargli un giocherello.</span></p>
+      <p class="pnext"><span>—&nbsp;Sono contento che tu mi abbia comprato questo</span> <em class="italics">paese</em><span>&nbsp;—&nbsp;mormorava Mario, salendo in carrozza, per tornare a casa.&nbsp;—&nbsp;Quante saranno le case?</span></p>
+      <p class="pnext"><span>—&nbsp;Venti, forse.</span></p>
+      <p class="pnext"><span>—&nbsp;Ed io ti darò venti baci piccoli, e se vi è un lungo campanile, te ne darò uno grosso grosso. Sono più contento, perchè questo è un giocattolo con cui posso giuocare a casa. Venerdì mamma m’ha comprato un cerchio di legno e una palla elastica. Che n’ho da fare, in casa, del cerchio e della palla? Guastano i mobili e possono rompere gli specchi.</span></p>
+      <p class="pnext"><span>—&nbsp;Ti servono al Pincio, mummietta mia ragionevole.</span></p>
+      <p class="pnext"><span>—&nbsp;No, no, mi servono a villa Pamphily. Venerdì ci siamo stati, con mamma. Io ero</span> <span class="invisible pageno target" id="page-133" title="133"></span><span>annoiato di stare in carrozza chiusa, con mamma, ma essa m’ha detto: quando siamo lì, scenderemo.</span></p>
+      <p class="pnext"><span>—&nbsp;Non eri mai andato in carrozza chiusa, Mario?</span></p>
+      <p class="pnext"><span>—&nbsp;Mai, papà.</span></p>
+      <p class="pnext"><span>—&nbsp;E lassù hai giuocato col cerchio e con la palla?</span></p>
+      <p class="pnext"><span>—&nbsp;Sì, mentre mamma discorreva con Riccardo.</span></p>
+      <p class="pnext"><span>—&nbsp;Con Riccardo?</span></p>
+      <p class="pnext"><span>—&nbsp;Sì, papà.</span></p>
+      <p class="pnext"><span>—&nbsp;Che faceva Riccardo?</span></p>
+      <p class="pnext"><span>—&nbsp;Passeggiava, papà. Per un pezzo sono stato con loro, ma non mi davano retta e sono corso innanzi, con la palla: poi la palla è andata in un viale di contro e, per cercarla, non ho più trovata la mamma. Se mi perdevo, papà, mi avrebbero mangiato i lupi, in quella foresta.</span></p>
+      <p class="pnext"><span>—&nbsp;Sì... forse. E... la mamma?</span></p>
+      <p class="pnext"><span>—&nbsp;L’ho riacchiappata vicino alla carrozza, che mi aspettava.</span></p>
+      <p class="pnext"><span>—&nbsp;Dopo quanto tempo, Mario?</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-134" title="134"></span><span>—&nbsp;Dopo cinque minuti, papà.</span></p>
+      <p class="pnext"><span>—&nbsp;È troppo poco.</span></p>
+      <p class="pnext"><span>—&nbsp;Allora dopo cinque giorni, papà. M’ha sgridato ed io ho pianto. La colpa era del cerchio e della palla e li ho bastonati. Riccardo è salito in carrozza con noi. Allora hanno abbassate le tendine e non vedevamo più la strada. Siamo scesi a Ripetta, papà, ma prima Riccardo ha baciato mamma sul collo. Perchè lo ha fatto, papà?</span></p>
+      <p class="pnext"><span>—&nbsp;. . . . . . . .</span></p>
+      <p class="pnext"><span>—&nbsp;Noi siamo andati via e lui è rimasto in carrozza. Ma perchè lui bacia la mamma sul collo? Lui non è il mio papuccio bello; lui non è Mario, la mummietta bella, per baciare la mamma. Digli che non lo faccia più, papà.</span></p>
+      <p class="pnext"><span>—&nbsp;Glielo dirò, figlio mio.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>La madre aspettava il bimbo sul pianerottolo, tendendo l’orecchio al rumore dei passi.</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-135" title="135"></span><span>—&nbsp;Sei solo, Mario?</span></p>
+      <p class="pnext"><span>—&nbsp;Solo. Papà m’ha comprato il</span> <em class="italics">paese</em><span>, mamma, e le paste per te.</span></p>
+      <p class="pnext"><span>Ella tremò tutta, impallidendo. Il bimbo, ritto innanzi a lei, la guardava, con gli occhi lucenti.</span></p>
+      <p class="pnext"><span>—&nbsp;Dove è tuo padre, Mario?</span></p>
+      <p class="pnext"><span>—&nbsp;È andato a dire a Riccardo che non ti baci più, mamma.</span></p>
+      <p class="pnext"><span>—&nbsp;Figlio mio!&nbsp;—&nbsp;gridò lei, piombando a terra, con le braccia aperte.</span></p>
+      <div class="align-center auto-scaled block figure" style="width: 14%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/fineparag.png" /></div>
+      <p class="pfirst"><span class="invisible pageno target" id="page-136" title="136"></span> <span class="invisible pageno target" id="page-137" title="137"></span></p>
+      <div class="align-center auto-scaled block figure" style="width: 73%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/corn.png" /></div>
+    </div>
+    <div class="level-2 section" id="gli-spostati">
+      <h2 class="center level-2 pfirst section-title title"><a class="toc-backref" href="#id15"><span>GLI SPOSTATI</span></a></h2>
+      <p class="pfirst"><span class="invisible pageno target" id="page-138" title="138"></span> <span class="invisible pageno target" id="page-139" title="139"></span></p>
+      <p class="pnext"><span>Suo padre è un giornalista, sua madre una maestra di lingue straniere. Il bimbo ha otto anni, ma pare che ne abbia dodici per le strane cose che sa, per le singolari risposte che dà. Egli è già stato a Venezia, a Firenze, a Napoli, non gli resta più nessuna impressione di paesaggio per la sua gioventù: egli si stringe nelle spalle quando gli nominano il Vesuvio o la gondola. Ha dormito in tutti gli alberghi, da quello di primo ordine, servito come un piccolo principe ereditario, divertendosi a suonare ogni momento il campanello elettrico, a</span> <span class="invisible pageno target" id="page-140" title="140"></span><span>quelli di quart’ordine, stanze fredde ed incomode, senza tappeti, col letto stretto e duro. Questo bimbo ha già pranzato in tutte le trattorie, ha preso il gusto delle pietanze complicate e degli intingoli piccanti: egli sa chiamare il cameriere e ordinargli del vitello alla salsa di tonno e una maionese di arigusta. Prima di entrare egli dice al papà: Papà, se abbiamo quattrini, voglio la pernice coi tartufi. E il papà gliela fa portare: mentre il giorno seguente si pranza a casa in fretta, con un semplice arrosto di capretto, circondato da molte patate. Il bimbo è già stato in tutti i teatri e ha inteso l’</span><em class="italics">Aida</em><span>, il</span> <em class="italics">Lohengrin</em><span>, il</span> <em class="italics">Faust</em> <span>e il</span> <em class="italics">Poliuto</em><span>: egli ama l’</span><em class="italics">Aida</em> <span>per i morettini, il</span> <em class="italics">Faust</em> <span>perchè vi è un bel diavolo, ma tollera appena il</span> <em class="italics">Lohengrin</em> <span>perchè vi è il cigno, e non può soffrire il</span> <em class="italics">Poliuto</em> <span>perchè non vi è nulla di tutto questo. Ama molto la Durand e la Singer: delle altre non si cura. La prosa lo interessa meno della musica, ma ci va per le attrici. Negli intermezzi il padre lo mena sul palcoscenico: questo</span> <span class="invisible pageno target" id="page-141" title="141"></span><span>bambino è amico della Marini, la Tessero lo ha baciato, la Campi gli ha donato dei confetti ed egli ha fatto una passione per la Pietriboni. È un bimbo che non ha mai sonno, a mezzanotte; e quando rimane in casa, invano la serva cerca di narrargli le favole: egli è nervoso, non può dormire. Ha imparato a leggere sopra un giornale e sa gli pseudonimi di suo padre. Non sa scrivere ancora bene e già compone brani di cronaca. È un bimbo che ha sempre male allo stomaco, perchè in casa sua ora si pranza all’una, ora alle otto, ora si beve il Bordeaux, ora il vinello acido. Egli conosce già il modo di licenziare un amico importuno e impara quello di burlare i creditori; ha assistito a un sequestro, mentre sua madre, pallida, piangeva, e suo padre era scomparso. Sono già due o tre volte che suo padre se lo abbraccia strettamente, e baciandolo, gli dice sottovoce di essere buono, di non dare dispiaceri alla mamma: e una di queste volte il papà è tornato a casa, disteso in una carrozza, svenuto,</span> <span class="invisible pageno target" id="page-142" title="142"></span><span>insanguinato, col braccio trapassato da una palla. Durante la malattia, niente pranzetti, niente scarrozzate, niente teatri: ma una miseria crescente, i creditori feroci, la madre sfinita, il padre torbido e rabbioso. Questo bambino, in fine, sa che suo padre è scettico e ha udito una quantità di discorsi ironici sull’amore, sulla patria e sulla virtù—e mi ha detto, un giorno, seriamente: Tutto sta in un buon colpo di rivoltella.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>L’unica figliuola di un albergatore ricco: non ha la mamma. Il padre, che l’adora, l’ha affidata alla cameriera maggiore che se la porta dapertutto, in cucina, in cantina, nelle soffitte, negli appartamenti, al salone di ricevimento, sempre con lei. La bambina&nbsp;—&nbsp;dieci anni&nbsp;—&nbsp;</span> <span class="invisible pageno target" id="page-143" title="143"></span><span>vive in questo grande andirivieni, tra una folla che si rinnova sempre. Ha una stanzetta che è un amore e uno studiolo col pianoforte, ma se la gente è molta, bisogna finire per cedere anche il suo quartierino, e la bimba con la cameriera passano, di stanza in stanza, dormendo ora qua ora là, accampate, salendo dal primo al quinto piano. La bimba finisce con istudiare un quarto d’ora la sua lezione di pianoforte, nel salone, tra il chiacchiericcio inglese, tedesco, francese. I viaggiatori le sorridono, le parlano, la baciano, ed ella ha imparato a non infastidirsi, a sorridere macchinalmente, a fare la riverenza, a dire: «J’aime beaucoup la France, monsieur.»&nbsp; Tutti questi visi estranei, indifferenti, sempre in arrivo, sempre in partenza, le passano innanzi come una fantasmagoria, e lei ha già imparato a ricondurre un viaggiatore fino alla porta, a mandargli un bacio di addio e a stringersi nelle spalle, quando è partito. Ella sa pranzare a tavola rotonda, rifiutare una pietanza, piegare il</span> <span class="invisible pageno target" id="page-144" title="144"></span><span>tovagliolo: ella sa tutte le magagne del cuoco, le costolette dall’osso appiccicato, il burro che serve tre volte, gli avanzi di carne che formano l’infarcitura del timballo, il lesso di quattro giorni che diventa polpetta in umido, il bianco mangiare fatto con l’amido, i pasticci economici di crema di castagne, e sorride della buona fede dei viaggiatori. Ella vede le gradazioni di rispetto dei camerieri per la vecchia principessa col seguito, per la coppia felice di sposini ricchi, pel banchiere tronfio e pel deputato chiacchierone: ha imparato a disprezzare i miserabili che vogliono una stanza al quarto piano, con finestra sul cortile, che non pranzano a tavola rotonda, che non pigliano caffè nell’albergo e portano nella valigia una quantità di steariche, per non consumare quella dell’albergo, che costa una lira. Ella vede e sente una quantità di cose, dagli usci socchiusi, passando pei corridoi, entrando improvvisamente nel salone, alla fine del pranzo o di notte: disordini equivoci di camere, signore in camiciuola che si pettinano, signori</span> <span class="invisible pageno target" id="page-145" title="145"></span><span>in maniche di camicia che si tingono i mustacchi, camerieri che baciano furtivamente le cameriere, signori arzilli, scricchiolii di porte, sbagli di numero, ombre che attraversano i corridoi di notte, dialoghi sommessi. Lei china gli occhi, impallidisce e sorride. Quando si sta in famiglia, col padre, con lo zio, coi cugini, ella sente i discorsi brutali d’interesse, i progetti avidi di guadagno, le</span> <em class="italics">combinazioni</em> <span>migliori per scorticare la gente, e tutto l’odio, il disprezzo che ha l’albergatore pel viaggiatore. E due cose l’hanno maggiormente colpita, a dieci anni: la figura di quella grande signora biondissima, che stette tre mesi, spendendo e spandendo, ricevendo tutta Roma, buttando il denaro dalla finestra, facendo accorrere i camerieri tutti quanti, che non saldava mai il conto e contro la quale suo padre era furioso, che poi lo saldò in un modo strano, mandando a chiamare l’albergatore, trattenendolo mezza giornata e rimandandolo tutto sorridente&nbsp;—&nbsp;e quel signore magro e pallido, che stette mezza giornata,</span> <span class="invisible pageno target" id="page-146" title="146"></span><span>bevette due bicchieri d’acqua, non parlò con nessuno e a mezzogiorno si ammazzò aprendosi le vene.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>Marito e moglie abitano la stessa casa, per convenienza, ma sono divisi. La moglie abita a terreno, il marito il primo piano, il bambino al secondo. Pranzano tutti tre insieme, ma la signora legge un libro e il signore legge un giornale: il bimbo sta in mezzo, guarda ora la mamma, ora il papà, coi grandi occhi meravigliati, e pranza silenziosamente. Il bimbo ha una</span> <em class="italics">gouvernante</em> <span>e un precettore giovane: ogni tanto la madre si degna di assistere alla lezione, in vestaglia di pizzi, con le pianelle ricamate d’oro, e trova che il figliuolo studia troppo, spiegando al precettore, sottovoce, le ragioni per cui non si deve studiar molto. Il bimbo</span> <span class="invisible pageno target" id="page-147" title="147"></span><span>guarda di sottecchi. Quando, ogni tanto, le prendono questi impeti di maternità, ella vuole con sè suo figlio, dalla mattina alla sera: il bimbo vede la madre che si dipinge gli occhi, che si sparge di polvere le braccia e il collo, che si distende delicatamente il rossetto sulle guance. Talvolta, per ischerzo, la mamma</span> <em class="italics">fa il viso</em> <span>al bimbo, che ride, solleticato, turbato da quei profumi. La madre, per condurlo fuori, lo trova goffo, mal vestito, e presa dalla furia materna, gli annoda alla vita una larga sciarpa femminile, gli mette al collo una cravatta meravigliosa, di trina, e se lo porta, così vestito, in carrozza, su e giù per molte ore, col freddo, senza paltoncino, mentre a lui si fa il naso rosso e vengono le lagrime agli occhi per la noia. Lei saluta tutti, mostra il suo bimbo, lo bacia spesso, gli domanda se vuole un dolce, se vuole un giocattolo, fa la commedia della madre amorosa. A Villa Borghese, nel viale della fontana, fa fermare la vettura e apre conversazione coi giovanotti, che le dicono certe</span> <span class="invisible pageno target" id="page-148" title="148"></span><span>cose piccanti che la fanno ridere brevemente, mentre il bimbo ascolta, cercando di comprendere. Spesso, ella sale un momento da una amica, lascia il bimbo in carrozza e si trattiene un’ora; la povera creatura aspetta, con gli occhi imbambolati, annoiandosi, e il cocchiere che sa tutto, borbotta certe frasi brutali. Poi, per quindici giorni la madre dimentica il bimbo, dandogli un bacio distratto al mattino, facendogli uno sgarbo nelle ore di nervosità, gridando alla cameriera di portarlo via, se piange. In certe ore, al bimbo è assolutamente proibito di entrare nel salotto della madre. Non ci si va: dice la</span> <em class="italics">gouvernante</em><span>, sorridendo. Per favore la madre si fa vedere dal figliuoletto, in abito da ballo, scollacciata, ma invano il bimbo tende le braccia a quella bella figura: essa ha paura di guastarsi l’acconciatura e parte, senza abbracciarlo, dicendogli di star quieto. In certe epoche un terremoto di feste scuote la casa: sarte, sarti, camerieri, balli, fiori, porte sbattute; non si pranza più, non si dorme più: poi la signora</span> <span class="invisible pageno target" id="page-149" title="149"></span><span>si abbandona a un riposo assoluto, non vede nessuno, è nervosa, pare mezzo pazza. Il padre è fuor di casa tutto il giorno, talvolta tutta la notte. Ogni tre o quattro mesi padre e madre hanno una lite tremenda, spaventosa, innanzi al bimbo, con ingiurie plateali, mobili rotti, svenimenti e minacce di separazione completa. E il bimbo sente in anticamera, in cucina, tutto quello che i servi dicono del padre e della madre.</span></p>
+      <blockquote>
+        <div>
+          <div class="align-center auto-scaled block figure" style="width: 14%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/fineparag.png" /></div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><span class="invisible pageno target" id="page-150" title="150"></span> <span class="invisible pageno target" id="page-151" title="151"></span></p>
+      <div class="align-center auto-scaled block figure" style="width: 73%"><img class="align-center block" style="display: block; width: 100%" alt=" " src="images/corn.png" /></div>
+    </div>
+    <div class="level-2 section" id="salvazione">
+      <h2 class="center level-2 pfirst section-title title"><a class="toc-backref" href="#id16"><span>SALVAZIONE</span></a></h2>
+      <p class="pfirst"><span class="invisible pageno target" id="page-152" title="152"></span> <span class="invisible pageno target" id="page-153" title="153"></span></p>
+      <p class="pnext"><span>Dopo il forte momento della passione&nbsp;—&nbsp;nelle placide ore di conversazione, quando le confidenze sgorgano, in una espansione spontanea, quando l’intimità sa essere amichevole e amorosa, Flavia parlava volentieri dell’infanzia propria, di quel giocondo tempo, tutto sole, tutto baci, tutto confetti. Questi ricordi la esaltavano, e come se sognasse, guardando lontano, con la voce tremante di emozione, narrava ancora di quante dolcezze l’aveva circondata l’amore materno. Poi, una improvvisa malinconia spegneva quell’eccitamento, la voce si faceva fioca, ella mormorava, vagamente:</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-154" title="154"></span><span>—&nbsp;La mamma... la mamma...</span></p>
+      <p class="pnext"><span>Quasi volesse sottrarsi a questa mestizia, prendeva le mani di Cesare, lo guardava negli occhi, dicendogli:</span></p>
+      <p class="pnext"><span>—&nbsp;Dimmi di te, amore, dimmi di te.</span></p>
+      <p class="pnext"><span>Cesare sorrideva, fumando ancora la sua sigaretta, nella beatitudine dello spirito appagato e tranquillo.</span></p>
+      <p class="pnext"><span>—&nbsp;Io sono stato un bimbo molto robusto, molto chiassoso e molto violento, amore. Ecco tutto.</span></p>
+      <p class="pnext"><span>—&nbsp;E niente altro?</span></p>
+      <p class="pnext"><span>—&nbsp;No, cara, niente altro.</span></p>
+      <p class="pnext"><span>—&nbsp;Allora...&nbsp;—&nbsp;diceva lei, crollando il capo&nbsp;—&nbsp;dimmi del tuo bambino.</span></p>
+      <p class="pnext"><span>Cesare si faceva serio per un istante e la fissava, come diffidente. Ma vedeva negli occhi di Flavia tanta umile curiosità, tanto interesse affettuoso, che il suo sospetto si dileguava. Allora, col suo sorriso orgoglioso di padre felice, egli le parlava del suo bimbo, che si chiamava Paolo come il nonno, che non voleva</span> <span class="invisible pageno target" id="page-155" title="155"></span><span>essere più chiamato</span> <em class="italics">bebè</em><span>, perchè era grande, perchè aveva dieci anni.</span></p>
+      <p class="pnext"><span>—&nbsp;Ed ha i capelli molto biondi, come te?&nbsp;—&nbsp;chiedeva Flavia, profondamente attenta.</span></p>
+      <p class="pnext"><span>—&nbsp;Molto biondi e ricciuti. Va in collera quando gli dico che ha il parrucchino: è molto sensibile al ridicolo, non può sopportare che si scherzi con lui. Impallidisce, non piange. Va in un angolo e pensa: se gli parliamo, non risponde. Le sue malinconie sono quelle di un uomo.</span></p>
+      <p class="pnext"><span>—&nbsp;Forse è gracile&nbsp;—&nbsp;mormorava lei, impietosita.</span></p>
+      <p class="pnext"><span>—&nbsp;No, è sentimentale; troppo, forse. Bisogna che io gli faccia perdere questa sensibilità squisita: se no, sarà molto infelice. Se si abitua ad amar troppo, a desiderare troppo, a soffrire troppo per la mancanza di quello che ama e di quello che desidera, povera la mia creatura!</span></p>
+      <p class="pnext"><span>Un silenzio regnava, angoscioso. La conversazione, arrivata di nuovo alla passione,</span> <span class="invisible pageno target" id="page-156" title="156"></span><span>aveva perduto la placidezza e la soavità. Cesare tentava di ricominciare il discorso del bambino, ma anche questo si faceva scabroso: poichè a ogni momento, parlando di Paolo, appariva accanto la figura della madre, della giovane moglie tradita. E per rispetto alla donna che non amava più, per delicatezza verso quella che amava, non poteva pronunziare il nome della moglie innanzi all’amante. Taceva. D’improvviso, Flavia si rizzava in piedi, gli veniva accanto, e con quella sua dolcezza femminile piena di lusinghe, che ottiene tutto, gli diceva:</span></p>
+      <p class="pnext"><span>—&nbsp;Perchè non mi conduci il bambino?</span></p>
+      <p class="pnext"><span>La prima volta che Flavia gli fece questa strana richiesta, Cesare ebbe un moto di ripugnanza e le rispose vivamente:</span></p>
+      <p class="pnext"><span>—&nbsp;È una follia.</span></p>
+      <p class="pnext"><span>Ma Flavia non si scoraggiò. Ogni tanto, quando la tenerezza di Cesare per lei fluiva più larga, ella si faceva tutta buona, tutta pia, per chiedergli di condurle il bambino. Invano egli taceva o cercava di mutar discorso: Flavia</span> <span class="invisible pageno target" id="page-157" title="157"></span><span>vi ritornava, ostinata nel suo desiderio. Fino a che Cesare, infastidito che ella non comprendesse l’indelicatezza di questo capriccio, le rispose:</span></p>
+      <p class="pnext"><span>—&nbsp;Del bimbo dispone la madre e non vorrà mandarlo da te; dovresti intenderlo.</span></p>
+      <p class="pnext"><span>Una scena spaventosa ne seguì, in cui, volta a volta, Flavia si accusò per questo amore colpevole e ne accusò Cesare, pianse, si disperò, si contorse le mani, maledisse la sua esistenza sbagliata e il minuto odioso in cui aveva incontrato Cesare. Egli dovette consolarla; ma ella non si chetava, sfogando tutto il dolore lungamente compresso di una posizione falsa, avvilendosi sino a confessare i propri rimorsi, rimpiangendo tutto un ideale di famiglia, di pace casalinga, di onestà, a cui aveva rinunziato per Cesare. Egli dovette abbracciarla, mormorarle vaghe parole di conforto incerte e puerili&nbsp;—&nbsp;poichè quanto ella diceva, era vero&nbsp;—&nbsp;carezzarla sui capelli come una bimba malata, cullare questo dolore per addormentarlo,</span> <span class="invisible pageno target" id="page-158" title="158"></span><span>e infine prometterle che le avrebbe condotto, un giorno, presto, il bambino.</span></p>
+      <p class="pnext"><span>—&nbsp;Me lo lascerai qui, solo, con me, amore?</span></p>
+      <p class="pnext"><span>—&nbsp;Te lo lascerò, cara, purchè tu non pianga.</span></p>
+      <p class="pnext"><span>—&nbsp;Me lo lascerai, per un’ora?</span></p>
+      <p class="pnext"><span>—&nbsp;Sì, cara.</span></p>
+      <p class="pnext"><span>—&nbsp;O amore mio bello, o gioia mia!&nbsp;—&nbsp;fece lei calma, estatica.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>—&nbsp;Paolo&nbsp;—&nbsp;disse il padre, spingendo avanti il bimbo&nbsp;—&nbsp;ecco qui la bella signora che voleva vederti.</span></p>
+      <p class="pnext"><span>Il bimbo levò gli occhi neri in faccia a Flavia e sorrise lievemente. Ella congiunse le mani, in un gesto di meraviglia:</span></p>
+      <p class="pnext"><span>—&nbsp;Quanto è bello, quanto è bello!&nbsp;—&nbsp;disse sottovoce.</span></p>
+      <p class="pnext"><span>E all’orecchio del padre:</span></p>
+      <p class="pnext"><span>—&nbsp;Cesare, digli se vuol darmi un bacio.</span></p>
+      <p class="pnext"><span>—&nbsp;Paolo, vuoi dare un bacio alla signora?</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-159" title="159"></span><span>—&nbsp;Sì&nbsp;—&nbsp;disse il bambino.</span></p>
+      <p class="pnext"><span>E con un atto gentile e delicato, le prese la bella mano gemmata e gliela baciò.</span></p>
+      <p class="pnext"><span>—&nbsp;Come un cavaliere cortese: bravo, Paolo!&nbsp;—&nbsp;disse il padre, insuperbito, mentre Flavia seguitava a contemplare il bambino.&nbsp;—&nbsp;Carino mio, vuoi restare con la signora mentre io vado qui vicino?</span></p>
+      <p class="pnext"><span>—&nbsp;Ritorni presto, papà?</span></p>
+      <p class="pnext"><span>—&nbsp;Ritorno presto, nino mio.</span></p>
+      <p class="pnext"><span>E poichè il bimbo era presente, quei due non osarono toccarsi la mano; scambiarono solo una rapida occhiata. Flavia si chinò, prese per mano Paolo e se lo portò in salotto, presso un balcone aperto, come per guardarlo meglio. Egli se ne stava ritto, nel suo costumino di velluto oliva, tenendo stretto fra le mani il berrettino di velluto.</span></p>
+      <p class="pnext"><span>—&nbsp;Hai tal quale gli occhi di papà tuo&nbsp;—&nbsp;mormorò Flavia, pigliandogli una mano e carezzandola lievemente.</span></p>
+      <p class="pnext"><span>—&nbsp;Sì, ma la bocca è come quella della mamma&nbsp;—&nbsp;disse il bimbo, con un tono di orgoglio.</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-160" title="160"></span><span>—&nbsp;Non ti piace di rassomigliare a tuo papà?&nbsp;—&nbsp;e la voce non era sicura.</span></p>
+      <p class="pnext"><span>—&nbsp;Papà è bello: ma la mamma è più bella ancora; ha i capelli lunghi lunghi e le mani piccole piccole. Non la conoscete, voi, la mamma?</span></p>
+      <p class="pnext"><span>—&nbsp;. . . . . . . no.</span></p>
+      <p class="pnext"><span>—&nbsp;E perchè non la conoscete?</span></p>
+      <p class="pnext"><span>—&nbsp;Non so&nbsp;—&nbsp;fece lei, chinando il capo, mentre gli occhi le si gonfiavano di lagrime.</span></p>
+      <p class="pnext"><span>Paolo la guardò curiosamente e tacque. Ella si levò e gli andò a prendere dei confetti. Egli rifiutò gentilmente, ma guardando i confetti come un bimbo educato, che non osa accettare quello che desidera.</span></p>
+      <p class="pnext"><span>—&nbsp;Perchè non li prendi?</span></p>
+      <p class="pnext"><span>—&nbsp;Non sta bene; grazie.</span></p>
+      <p class="pnext"><span>—&nbsp;Ma se ti piacciono, prendili, Paolo. Te l’hanno insegnato a scuola?</span></p>
+      <p class="pnext"><span>—&nbsp;No, me l’ha insegnato mamma. Io non vado a scuola</span></p>
+      <p class="pnext"><span>—&nbsp;E chi ti fa lezione?</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-161" title="161"></span><span>—&nbsp;Mamma. Essa non potrebbe stare sola, dalla mattina sino alle tre. Così la lezione me la dà lei, sino a mezzogiorno.</span></p>
+      <p class="pnext"><span>—&nbsp;E a mezzogiorno?</span></p>
+      <p class="pnext"><span>—&nbsp;Facciamo colazione, mamma ed io.</span></p>
+      <p class="pnext"><span>—&nbsp;Soli soli?</span></p>
+      <p class="pnext"><span>—&nbsp;Il papà non ci è mai, a colazione. Ha troppo da fare, ha molti affari, molti affari.</span></p>
+      <p class="pnext"><span>Un breve silenzio.</span></p>
+      <p class="pnext"><span>—&nbsp;Prendi i confetti, Paolino.</span></p>
+      <p class="pnext"><span>—&nbsp;Sono troppi&nbsp;—&nbsp;disse Paolo, come ultima svogliata difesa.</span></p>
+      <p class="pnext"><span>—&nbsp;Li dividerai con qualche amichetto tuo.</span></p>
+      <p class="pnext"><span>—&nbsp;Io non ne ho.</span></p>
+      <p class="pnext"><span>—&nbsp;Con chi giuochi tu, dunque?</span></p>
+      <p class="pnext"><span>—&nbsp;Con mamma, quando essa ne ha voglia.</span></p>
+      <p class="pnext"><span>—&nbsp;Non ne ha voglia sempre?</span></p>
+      <p class="pnext"><span>—&nbsp;No.</span></p>
+      <p class="pnext"><span>—&nbsp;E perchè?</span></p>
+      <p class="pnext"><span>Il bambino la guardò e tacque. Un’indicibile, rapidissima espressione di terrore attraversò il volto di Flavia. Ma il bimbo non sapeva</span> <span class="invisible pageno target" id="page-162" title="162"></span><span>nulla, non doveva aver compreso quella domanda.</span></p>
+      <p class="pnext"><span>—&nbsp;Così non ti diverti molto?&nbsp;—&nbsp;riprese ella sospirando, come per sollevarsi da una grande oppressione.</span></p>
+      <p class="pnext"><span>—&nbsp;Sì, mi diverto. Mamma ricama, suona il pianoforte, e io guardo le immagini dei libri, giuoco con quei pezzetti di legno da far case, o guardo la gente che passa nella via.</span></p>
+      <p class="pnext"><span>—&nbsp;Sempre soli?</span></p>
+      <p class="pnext"><span>—&nbsp;Già: dovrebbe esserci papà, ma egli ha molti affari, molti affari.</span></p>
+      <p class="pnext"><span>—&nbsp;Chi te lo ha detto, di questi affari?</span></p>
+      <p class="pnext"><span>—&nbsp;Mamma.</span></p>
+      <p class="pnext"><span>—&nbsp;Ah!</span></p>
+      <p class="pnext"><span>—&nbsp;Essa mi racconta anche le favole, quando io mi annoio. Ma sono troppo tristi, le sue favole, e mi fanno piangere. Ne sapete voi, di quelle favole che fanno ridere?</span></p>
+      <p class="pnext"><span>—&nbsp;No, caro. Te le racconterà di sera, le favole?</span></p>
+      <p class="pnext"><span>—&nbsp;Sì, di sera. Io vorrei andare in teatro</span> <span class="invisible pageno target" id="page-163" title="163"></span><span>dove papà una volta mi ha condotto, con mamma. Ma ora papà non può accompagnarci più e andiamo a letto presto. Egli viene a casa molto tardi, di notte, molto di notte, e cammina pian piano, nell’altra stanza, per non farci risvegliare. Ma la mamma è sempre sveglia e sente: qualche volta sono sveglio anch’io&nbsp;—&nbsp;Ecco papà&nbsp;—&nbsp;mi dice lei, sottovoce. Poi, quando papà entra, a darmi un bacio, noi chiudiamo gli occhi e fingiamo di dormire.</span></p>
+      <p class="pnext"><span>—&nbsp;E ti bacia, papà?</span></p>
+      <p class="pnext"><span>—&nbsp;Sì: e se ne va via in punta di piedi, come è venuto.</span></p>
+      <p class="pnext"><span>—&nbsp;Non dà un bacio alla mamma?</span></p>
+      <p class="pnext"><span>—&nbsp;No&nbsp;—&nbsp;disse il bimbo, facendosi pensieroso.</span></p>
+      <p class="pnext"><span>—&nbsp;Tu, dunque, dormi nella camera della mamma?</span></p>
+      <p class="pnext"><span>—&nbsp;Sì: prima non ci dormivo. Ma papà andò a fare un viaggio di un mese, e mamma, che aveva paura di dormir sola, fece portare il mio lettuccio in camera sua. Dopo, ci sono restato.</span></p>
+      <p class="pnext"><span class="invisible pageno target" id="page-164" title="164"></span><span>Flavia si arrovesciò nella poltroncina, come se svenisse. Il bimbo la guardava co’ suoi occhi buoni e meravigliati. Ella non parlava, non trasaliva, non si moveva, e Paolo cominciava ad aver paura di questa bella signora tutta pallida. Egli stringeva macchinalmente il berretto e desiderava che suo padre tornasse, per andarsene. Poi, Flavia si scosse, levò la testa, e tanto dolore le si dipinse nella faccia, che il bimbo le tese le braccia come a sua madre, dicendole:</span></p>
+      <p class="pnext"><span>—&nbsp;Che hai?</span></p>
+      <p class="pnext"><span>Uno scoppio di pianto la vinse, mentre baciava quel bel bambino affettuoso, tutto sorpreso da quest’impeto. Le lagrime bagnavano le guance, il collo di Paolo.</span></p>
+      <p class="pnext"><span>—&nbsp;Non piangere, signora, non piangere così. Non sarà niente.</span></p>
+      <p class="pnext"><span>—&nbsp;Non piango, no, non piango più. Dammi un bacio, come alla tua mamma.</span></p>
+      <p class="pnext"><span>Egli le buttò le braccia al collo e la baciò.</span></p>
+      <p class="pnext"><span>—&nbsp;Addio, caro, resta un minuto qui. Ora</span> <span class="invisible pageno target" id="page-165" title="165"></span><span>papà tuo verrà e ti porterà via. Io debbo uscire.</span></p>
+      <p class="pnext"><span>—&nbsp;Debbo dire alla mamma che sono venuto qui?</span></p>
+      <p class="pnext"><span>—&nbsp;Perchè?</span></p>
+      <p class="pnext"><span>—&nbsp;Perchè papà mi ha detto di non dirglielo.</span></p>
+      <p class="pnext"><span>Ella pensò: poi, come se gittasse via l’ultimo dubbio:</span></p>
+      <p class="pnext"><span>—&nbsp;Diglielo alla mamma, che sei stato da Flavia.</span></p>
+      <p class="pnext"><span>Per un minuto la bella mano si posò sui riccioli del bimbo, come per benedirlo.</span></p>
+      <div class="line-block outermost">
+        <div class="center line">
+          <span class="small">*</span>
+        </div>
+        <div class="center line">
+          <span class="small">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>
+        </div>
+      </div>
+      <p class="pfirst"><span>E mai più Cesare e Flavia si sono incontrati.</span></p>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><span class="bold small-caps">FINE.</span></p>
+      <div class="topic">
+        <p class="center centerleft level-2 pfirst title topic-title topic-title first"><span class="invisible pageno target" id="page-166" title="166"></span><span>NOTE DI TRASCRIZIONE</span></p>
+        <p class="pfirst"><span>I seguenti refusi nell’originale sono stati corretti:</span></p>
+        <blockquote>
+          <div>
+            <table class="docutils footnote" frame="void" id="id4" rules="none">
+              <colgroup>
+                <col class="label" />
+                <col />
+              </colgroup>
+              <tbody valign="top">
+                <tr>
+                  <td class="label"><a class="fn-backref" href="#id2">[<span>1</span>]</a></td>
+                  <td>
+                    <p class="first last pfirst"><em class="italics">Monotamente</em> <span>è stato corretto con</span> <em class="italics">monotonamente</em><span>;</span></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="docutils footnote" frame="void" id="id5" rules="none">
+              <colgroup>
+                <col class="label" />
+                <col />
+              </colgroup>
+              <tbody valign="top">
+                <tr>
+                  <td class="label"><a class="fn-backref" href="#id3">[<span>2</span>]</a></td>
+                  <td>
+                    <p class="first last pfirst"><span>L'espressione</span> <em class="italics">dello piccola bastarda</em> <span>(nell'originale), è stata corretta in</span> <em class="italics">della piccola bastarda</em><span>.</span></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </blockquote>
+      </div><!-- -*- encoding: utf-8 -*- -->
+      <div class="backmatter"></div>
+      <div class="cleardoublepage"></div>
+    </div>
+  </div>
+</body>
+</html>
